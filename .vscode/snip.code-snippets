@@ -1,0 +1,15 @@
+{
+  "Daisen Manual Card": {
+    "scope": "markdown",
+    "prefix": "daisen",
+    "body": [
+      "### [${1:製品名} ￥${2:価格}](${3:商品ページのURL})",
+      "",
+      "> ${4:説明文}",
+      "",
+      "<img alt=\"${1}\" src=\"${5:画像のアドレス}\" width=\"300\">",
+      "$0"
+    ],
+    "description": "ダイセン製品用テンプレート"
+  }
+}
