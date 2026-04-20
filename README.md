@@ -33,12 +33,6 @@
 
 <img alt="baseboard" src="https://makeshop-multi-images.akamaized.net/Daisen5553/shopimages/96/01/1_000000000196.jpg" width=300>
 
-### [e-Gadget Core ￥19800](https://www.daisen-netstore.com/shopdetail/000000000202/)
-
-> DAISEN製ロボットCPU基板　C-Styleによるプログラミング
-
-<img alt="baseboard" src="https://makeshop-multi-images.akamaized.net/Daisen5553/shopimages/02/02/2_000000000202.jpg" width=300>
-
 ### [Raspberry Pi Pico2WH ￥1710](https://akizukidenshi.com/catalog/g/g130399/)
 
 > Raspberry Pi Pico2Wにピンヘッダーをつけた完成品　Pythonによるプログラミング
@@ -168,15 +162,14 @@
 
 | 状態 | 項目 | 単価 × 個数 | 小計 |
 | :---: | :--- | :--- | :--- |
-| [ ] | [~~Raspberry Pi Pico2WH~~](https://akizukidenshi.com/catalog/g/g130399/) | ~~￥1,710 × 1~~ | ~~￥1,710~~ |
-| [ ] | [e-Gadget Core](https://www.daisen-netstore.com/shopdetail/000000000202/) | ￥19,800 × 1 | ￥19,800 |
+| [ ] | [Raspberry Pi Pico2WH](https://akizukidenshi.com/catalog/g/g130399/) | ￥1,710 × 1 | ￥1,710 |
 | [ ] | [TB6612 モータードライブキット](https://akizukidenshi.com/catalog/g/g111219) | ￥500 × 2 | ￥1,000 |
 | [ ] | [ユニバーサル基板Bタイプ](https://akizukidenshi.com/catalog/g/g103230) | ￥220 × 3 | ￥660 |
 | [ ] | [ホワイトラインセンサー](https://www.daisen-netstore.com/shopdetail/000000000189) | ￥1,430 × 4 | ￥5,720 |
 | [ ] | [BNO085 9軸センサー](https://www.switch-science.com/products/9372) | ￥4,620 × 1 | ￥4,620 |
 | [ ] | [ボールセンサー](https://www.daisen-netstore.com/shopdetail/000000000188/) | ￥495 × 4 | ￥1,980 |
 | [ ] | [電解コンデンサ 1000μF](https://akizukidenshi.com/catalog/g/g117885) | ￥40 × 4 | ￥160 |
-| **合計** | | 15 | **￥33,940(￥15,850)** |
+| **合計** | | 15 | **￥15,850** |
 
 ---
 
@@ -208,7 +201,7 @@
 
 ## 総合計（e-Gadget構成、Pico2WH構成）
 
-### ￥55,835(￥37,745)
+### ￥37,745
 
 > [!WARNING]
 > バッテリー類を考慮していません！！
@@ -216,8 +209,8 @@
 ## 予算配分（e-Gadget構成）
 
 ```mermaid
-pie title 合計 55,835円
+pie title 合計 37,745円
     "駆動系 (ベース・モーター)" : 19800
-    "制御・センサー系 (e-Gadget本体含む)" : 33940
+    "制御・センサー系 (e-Gadget本体含む)" : 15850
     "消耗品・外装 (ネジ・抵抗・他)" : 2195
 ```
