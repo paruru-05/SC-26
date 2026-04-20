@@ -189,19 +189,19 @@
 
 | 状態 | 項目 | 単価 × 個数 | 小計 |
 | :---: | :--- | :--- | :--- |
-| [ ] | [六角オネジ・メネジ](https://akizukidenshi.com/catalog/g/g107319/) | ￥30 × 8 | ￥240 |
-| [ ] | [六角両メネジ](https://akizukidenshi.com/catalog/g/g107313/) | ￥30 × 8 | ￥240 |
-| [ ] | [なべ小ネジ (10個入)](https://akizukidenshi.com/catalog/g/g110245/) | ￥100 × 1 | ￥100 |
+| [ ] | [六角オネジ・メネジ](https://akizukidenshi.com/catalog/g/g107319/) | ￥30 × 16 | ￥480 |
+| [ ] | [六角両メネジ](https://akizukidenshi.com/catalog/g/g107313/) | ￥30 × 16 | ￥480 |
+| [ ] | [なべ小ネジ (10個入)](https://akizukidenshi.com/catalog/g/g110245/) | ￥100 × 2 | ￥200 |
 | [ ] | [六角ナット (100個入)](https://akizukidenshi.com/catalog/g/g111521/) | ￥650 × 1 | ￥650 |
 | [ ] | [基板用ワンタッチスペーサー](https://akizukidenshi.com/catalog/g/g112347/) | ￥30 × 8 | ￥240 |
 | [ ] | [波動スイッチ](https://akizukidenshi.com/catalog/g/g115739) | ￥130 × 2 | ￥260 |
-| **合計** | | 28 | **￥1,730** |
+| **合計** | | 37 | **￥2,310** |
 
 ---
 
 ## 総合計（e-Gadget構成、Pico2WH構成）
 
-### ￥37,745
+### ￥38,325
 
 > [!WARNING]
 > バッテリー類を考慮していません！！
@@ -209,8 +209,8 @@
 ## 予算配分（e-Gadget構成）
 
 ```mermaid
-pie title 合計 37,745円
+pie title 合計 38,325円
     "駆動系 (ベース・モーター)" : 19800
     "制御・センサー系 (e-Gadget本体含む)" : 15850
-    "消耗品・外装 (ネジ・抵抗・他)" : 2195
+    "消耗品・外装 (ネジ・抵抗・他)" : 2675
 ```
