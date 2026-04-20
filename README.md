@@ -149,12 +149,6 @@
 
 <img alt="波動スイッチ" src="https://akizukidenshi.com/img/goods/L/115739.jpg" width="300">
 
-### [コネクター付ケーブル 40P オスメス ￥180](https://akizukidenshi.com/catalog/g/g117228/)
-
-> 両端に1Pのピンが付いたフラットケーブル　離れたセンサーなどの接続に
-
-<img alt="ジャンパーワイヤー" src="https://akizukidenshi.com/img/goods/3/117228.jpg" width="300">
-
 ---
 
 ## 1. 一台ずつに必要なもの（駆動系）
@@ -208,14 +202,13 @@
 | [ ] | [六角ナット (100個入)](https://akizukidenshi.com/catalog/g/g111521/) | ￥650 × 1 | ￥650 |
 | [ ] | [基板用ワンタッチスペーサー](https://akizukidenshi.com/catalog/g/g112347/) | ￥30 × 8 | ￥240 |
 | [ ] | [波動スイッチ](https://akizukidenshi.com/catalog/g/g115739) | ￥130 × 2 | ￥260 |
-| [ ] | [コネクター付ケーブル 40P](https://akizukidenshi.com/catalog/g/g117228/) | ￥180 × 1 | ￥180 |
-| **合計** | | 29 | **￥1,910** |
+| **合計** | | 28 | **￥1,730** |
 
 ---
 
 ## 総合計（e-Gadget構成、Pico2WH構成）
 
-### ￥56,015(￥37,925)
+### ￥55,835(￥37,745)
 
 > [!WARNING]
 > バッテリー類を考慮していません！！
@@ -223,8 +216,8 @@
 ## 予算配分（e-Gadget構成）
 
 ```mermaid
-pie title 合計 56,015円
+pie title 合計 55,835円
     "駆動系 (ベース・モーター)" : 19800
     "制御・センサー系 (e-Gadget本体含む)" : 33940
-    "消耗品・外装 (ネジ・抵抗・他)" : 2275
+    "消耗品・外装 (ネジ・抵抗・他)" : 2195
 ```
