@@ -63,6 +63,12 @@
 
 <img alt="BNO085 9軸センサーフュージョンモジュール" src="https://www.switch-science.com/cdn/shop/files/0415d683-e823-4890-9087-b9804f5e4b25_700x700.jpg" width="300">
 
+### [超音波距離センサー HC-SR04 ￥300x4](https://akizukidenshi.com/catalog/g/g111009/)
+
+> 超音波センサー　これがないと距離不明
+
+<img alt="BNO085 9軸センサーフュージョンモジュール" src="https://akizukidenshi.com/img/goods/L/111009.jpg" width="300">
+
 ### [ボールセンサー ￥495x4](https://www.daisen-netstore.com/shopdetail/000000000188/)
 
 > ボールセンサー　遮光しないと環境光に負ける
@@ -168,8 +174,10 @@
 | [ ] | [ホワイトラインセンサー](https://www.daisen-netstore.com/shopdetail/000000000189) | ￥1,430 × 4 | ￥5,720 |
 | [ ] | [BNO085 9軸センサー](https://www.switch-science.com/products/9372) | ￥4,620 × 1 | ￥4,620 |
 | [ ] | [ボールセンサー](https://www.daisen-netstore.com/shopdetail/000000000188/) | ￥495 × 4 | ￥1,980 |
+| [ ] | [超音波センサー](https://akizukidenshi.com/catalog/g/g111009/) | ￥300 × 4 | ￥1200 |
 | [ ] | [電解コンデンサ 1000μF](https://akizukidenshi.com/catalog/g/g117885) | ￥40 × 4 | ￥160 |
-| **合計** | | 15 | **￥15,850** |
+
+| **合計** | | 19 | **￥17,050** |
 
 ---
 
@@ -201,7 +209,7 @@
 
 ## 総合計（e-Gadget構成、Pico2WH構成）
 
-### ￥38,325
+### ￥39,525
 
 > [!WARNING]
 > バッテリー類を考慮していません！！
@@ -209,8 +217,8 @@
 ## 予算配分（e-Gadget構成）
 
 ```mermaid
-pie title 合計 38,325円
+pie title 合計 39,525円
     "駆動系 (ベース・モーター)" : 19800
-    "制御・センサー系 (e-Gadget本体含む)" : 15850
+    "制御・センサー系 (e-Gadget本体含む)" : 17050
     "消耗品・外装 (ネジ・抵抗・他)" : 2675
 ```
