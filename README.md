@@ -176,7 +176,6 @@
 | [ ] | [ボールセンサー](https://www.daisen-netstore.com/shopdetail/000000000188/) | ￥495 × 4 | ￥1,980 |
 | [ ] | [超音波センサー](https://akizukidenshi.com/catalog/g/g111009/) | ￥300 × 4 | ￥1200 |
 | [ ] | [電解コンデンサ 1000μF](https://akizukidenshi.com/catalog/g/g117885) | ￥40 × 4 | ￥160 |
-
 | **合計** | | 19 | **￥17,050** |
 
 ---
