@@ -2,6 +2,8 @@
 # 追加！！
 ## [バッテリーバッグ(価格表に入っていない)](https://store.shopping.yahoo.co.jp/storepsn/lipobag-1000.html)
 
+## [モーター用電線](https://akizukidenshi.com/catalog/g/g106753/)
+
 ## ここにあるのは部品の価格、商品ページと簡単な説明です
 
 ### 価格はほぼ税込価格です
