@@ -15,6 +15,12 @@
 
 ## 一台ずつに必要なもの
 
+### [Li-Po充電池 ￥1,900](https://www.rp-heliport.com/products/detail/13087)
+
+> Li-Po電池　乾電池より強い（笑）
+
+<img alt="charger" src="https://www.rp-heliport.com/html/upload/save_image/0518104254_60a31b9ec1e86.jpg" width=300>
+
 ### [オムニロボット用ベースボード ￥2200](https://www.daisen-netstore.com/smartphone/detail.html?id=000000000158)
 
 > DAISEN製オムニロボット用ベースボード　3輪用もあるため間違えないように
@@ -109,6 +115,12 @@
 
 <img alt="100本入 2.2kΩ抵抗" src="https://akizukidenshi.com/img/goods/L/125222.jpg" width="300">
 
+### [充電器(G3 CHARGER) ￥3,978](https://www.monotaro.com/g/07054937/)
+
+> Li-Poの充電器　コスパがちょうどいい
+
+<img alt="charger" src="https://jp.images-monotaro.com/Monotaro3/pi/full/mono84616098-241016-02.jpg" width=300>
+
 ---
 
 ## あるといいもの
@@ -176,7 +188,8 @@
 | [ ] | [ボールセンサー](https://www.daisen-netstore.com/shopdetail/000000000188/) | ￥495 × 4 | ￥1,980 |
 | [ ] | [超音波センサー](https://akizukidenshi.com/catalog/g/g111009/) | ￥300 × 4 | ￥1200 |
 | [ ] | [電解コンデンサ 1000μF](https://akizukidenshi.com/catalog/g/g117885) | ￥40 × 4 | ￥160 |
-| **合計** | | 19 | **￥17,050** |
+| [ ] | [バッテリー](https://www.rp-heliport.com/products/detail/13087) | ￥1,900 × 1 | ￥1,900 |
+| **合計** | | 20 | **￥18,950** |
 
 ---
 
@@ -188,7 +201,8 @@
 | [ ] | [40P ピンヘッダー](https://akizukidenshi.com/catalog/g/g100167/) | ￥35 × 1 | ￥35 |
 | [ ] | [100本入 1kΩ抵抗](https://akizukidenshi.com/catalog/g/g125102/) | ￥100 × 1 | ￥100 |
 | [ ] | [100本入 2.2kΩ抵抗](https://akizukidenshi.com/catalog/g/g125222/) | ￥150 × 1 | ￥150 |
-| **合計** | | 4 | **￥365** |
+| [ ] | [充電器]([https://akizukidenshi.com/catalog/g/g125102/](https://www.monotaro.com/g/07054937/)) | ￥3,978 × 1 | ￥3,978 |
+| **合計** | | 5 | **￥4,343** |
 
 ---
 
@@ -206,18 +220,16 @@
 
 ---
 
-## 総合計（e-Gadget構成、Pico2WH構成）
+## 総合計
 
-### ￥39,525
+### ￥45,403
 
-> [!WARNING]
-> バッテリー類を考慮していません！！
-
-## 予算配分（e-Gadget構成）
+## 予算配分
 
 ```mermaid
-pie title 合計 39,525円
+pie title 合計 45,403円
     "駆動系 (ベース・モーター)" : 19800
     "制御・センサー系 (e-Gadget本体含む)" : 17050
     "消耗品・外装 (ネジ・抵抗・他)" : 2675
+    "バッテリー関係" : 5878
 ```
