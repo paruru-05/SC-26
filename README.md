@@ -1,12 +1,6 @@
+# ここにあるのは部品の価格、商品ページと簡単な説明です
 
-# 追加！！
-## [バッテリーバッグ(価格表に入っていない)](https://store.shopping.yahoo.co.jp/storepsn/lipobag-1000.html)
-
-## [モーター用電線](https://akizukidenshi.com/catalog/g/g106753/)
-
-## ここにあるのは部品の価格、商品ページと簡単な説明です
-
-### 価格はほぼ税込価格です
+## 価格はほぼ税込価格です
 
 ### 主な利用ストアは[[秋月電子通商](https://akizukidenshi.com/catalog/default.aspx)]、[[DAISENネットストア](https://www.daisen-netstore.com)]、[[スイッチサイエンス](https://switch-science.com)]です
 
@@ -24,6 +18,12 @@
 > Li-Po電池　乾電池より強い（笑）
 
 <img alt="charger" src="https://www.rp-heliport.com/html/upload/save_image/0518104254_60a31b9ec1e86.jpg" width=300>
+
+### [バッテリーバッグ ￥880](https://store.shopping.yahoo.co.jp/storepsn/lipobag-1000.html)
+
+> Li-Poを入れるバッグ　防火用
+
+<img alt="バッテリーバッグ" src="https://shopping.c.yimg.jp/lib/storepsn/lipobag-1000-01.jpg" width="300">
 
 ### [オムニロボット用ベースボード ￥2200](https://www.daisen-netstore.com/smartphone/detail.html?id=000000000158)
 
@@ -125,6 +125,12 @@
 
 <img alt="charger" src="https://jp.images-monotaro.com/Monotaro3/pi/full/mono84616098-241016-02.jpg" width=300>
 
+### [耐熱ビニル絶縁電線 ￥900](https://akizukidenshi.com/catalog/g/g106753/)
+
+> ジャンパーワイヤーより太い電線　電源用に
+
+<img alt="耐熱ビニル絶縁電線" src="https://akizukidenshi.com/img/goods/L/106753.jpg" width="300">
+
 ---
 
 ## あるといいもの
@@ -165,8 +171,6 @@
 
 <img alt="波動スイッチ" src="https://akizukidenshi.com/img/goods/L/115739.jpg" width="300">
 
----
-
 ## 1. 一台ずつに必要なもの（駆動系）
 
 | 状態 | 項目 | 単価 × 個数 | 小計 |
@@ -174,13 +178,11 @@
 | [ ] | [オムニロボット用ベースボード](https://www.daisen-netstore.com/smartphone/detail.html?id=000000000158) | ￥2,200 × 1 | ￥2,200 |
 | [ ] | [プラスチックオムニホイール](https://www.daisen-netstore.com/smartphone/detail.html?id=000000000184) | ￥2,200 × 4 | ￥8,800 |
 | [ ] | [ロボサイトモーター 60:1](https://www.daisen-netstore.com/smartphone/detail.html?id=000000000196) | ￥2,200 × 4 | ￥8,800 |
-| **合計** | | 9 | **￥19,800** |
+| **合計** | | **9** | **￥19,800** |
 
 ---
 
 ## 2. 一台ずつに必要なもの（制御・センサー系）
-
-> バッテリーが入ります
 
 | 状態 | 項目 | 単価 × 個数 | 小計 |
 | :---: | :--- | :--- | :--- |
@@ -190,10 +192,11 @@
 | [ ] | [ホワイトラインセンサー](https://www.daisen-netstore.com/shopdetail/000000000189) | ￥1,430 × 4 | ￥5,720 |
 | [ ] | [BNO085 9軸センサー](https://www.switch-science.com/products/9372) | ￥4,620 × 1 | ￥4,620 |
 | [ ] | [ボールセンサー](https://www.daisen-netstore.com/shopdetail/000000000188/) | ￥495 × 4 | ￥1,980 |
-| [ ] | [超音波センサー](https://akizukidenshi.com/catalog/g/g111009/) | ￥300 × 4 | ￥1200 |
+| [ ] | [超音波センサー](https://akizukidenshi.com/catalog/g/g111009/) | ￥300 × 4 | ￥1,200 |
 | [ ] | [電解コンデンサ 1000μF](https://akizukidenshi.com/catalog/g/g117885) | ￥40 × 4 | ￥160 |
 | [ ] | [バッテリー](https://www.rp-heliport.com/products/detail/13087) | ￥1,900 × 1 | ￥1,900 |
-| **合計** | | 20 | **￥18,950** |
+| [ ] | [バッテリーバッグ](https://store.shopping.yahoo.co.jp/storepsn/lipobag-1000.html) | ￥880 × 1 | ￥880 |
+| **合計** | | **25** | **￥19,830** |
 
 ---
 
@@ -205,8 +208,9 @@
 | [ ] | [40P ピンヘッダー](https://akizukidenshi.com/catalog/g/g100167/) | ￥35 × 1 | ￥35 |
 | [ ] | [100本入 1kΩ抵抗](https://akizukidenshi.com/catalog/g/g125102/) | ￥100 × 1 | ￥100 |
 | [ ] | [100本入 2.2kΩ抵抗](https://akizukidenshi.com/catalog/g/g125222/) | ￥150 × 1 | ￥150 |
-| [ ] | [充電器]([https://akizukidenshi.com/catalog/g/g125102/](https://www.monotaro.com/g/07054937/)) | ￥3,978 × 1 | ￥3,978 |
-| **合計** | | 5 | **￥4,343** |
+| [ ] | [充電器](https://www.monotaro.com/g/07054937/) | ￥3,978 × 1 | ￥3,978 |
+| [ ] | [モーター用電線](https://akizukidenshi.com/catalog/g/g106753/) | ￥900 × 1 | ￥900 |
+| **合計** | | **6** | **￥5,243** |
 
 ---
 
@@ -220,20 +224,21 @@
 | [ ] | [六角ナット (100個入)](https://akizukidenshi.com/catalog/g/g111521/) | ￥650 × 1 | ￥650 |
 | [ ] | [基板用ワンタッチスペーサー](https://akizukidenshi.com/catalog/g/g112347/) | ￥30 × 8 | ￥240 |
 | [ ] | [波動スイッチ](https://akizukidenshi.com/catalog/g/g115739) | ￥130 × 2 | ￥260 |
-| **合計** | | 37 | **￥2,310** |
+| **合計** | | **45** | **￥2,310** |
 
 ---
 
 ## 総合計
 
-### ￥45,403
+### ￥47,183
 
 ## 予算配分
 
 ```mermaid
-pie title 合計 45,403円
-    "駆動系 (ベース・モーター)" : 19800
-    "制御・センサー系 (e-Gadget本体含む)" : 17050
-    "消耗品・外装 (ネジ・抵抗・他)" : 2675
-    "バッテリー関係" : 5878
+pie title 合計 47,183円
+    "駆動系" : 19800
+    "制御・センサー系" : 17050
+    "配線・充電器" : 5243
+    "バッテリー・バッグ" : 2780
+    "ネジ・スイッチ類" : 2310
 ```
