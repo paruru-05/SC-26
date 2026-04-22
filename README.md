@@ -1,26 +1,42 @@
-# ここにあるのは部品の価格、商品ページと簡単な説明です
+# 一旦これで全てです
 
-## 価格はほぼ税込価格です
-
-### 主な利用ストアは[[秋月電子通商](https://akizukidenshi.com/catalog/default.aspx)]、[[DAISENネットストア](https://www.daisen-netstore.com)]、[[スイッチサイエンス](https://switch-science.com)]です
+### 利用ストアは[[秋月電子通商](https://akizukidenshi.com/catalog/default.aspx)]、[[DAISENネットストア](https://www.daisen-netstore.com)]、[[スイッチサイエンス](https://switch-science.com)]、[[Yahoo!ショッピング](https://store.shopping.yahoo.co.jp/)]、[[ラジコンプラモデル専門店ヘリポート](https://www.rp-heliport.com/)]です
 
 > [!TIP]
-> 部品名をクリックで商品ページへジャンプ
-
-> [!TIP]
+> 部品名をクリックで商品ページへジャンプ<br>
 > e-GadgetまたはPico2WHは一台につきどちらか一方を購入すればよい
 ---
-# 目次
-## [画像&説明](#一台ずつに必要なもの)
-### [一台ずつ必要なもの](#一台ずつに必要なもの)
-### [    一セットで十分なもの](#まとめて一セットあれば十分なもの)
+<details>
+<summary><h1><strong>目次</strong></h1></summary>
+<details>
+<summary><a href="#一台ずつに必要なもの">画像&説明</a></summary>
+
+　　[一台ずつ必要なもの](#一台ずつに必要なもの)<br>
+　　[一セットで十分なもの](#まとめて一セット買えば十分なもの)<br>
+　　[あるといいもの](#あるといいもの)
+
+</details>
+<details>
+<summary><a href="#1-一台ずつに必要なもの駆動系">ジャンルごとの分類表・価格表</a></summary>
+
+　　[制御系パーツ](#2-一台ずつに必要なもの制御センサー系)<br>
+　　[配線・抵抗などのパーツ](#3-まとめて一セット買えば十分なもの配線抵抗)<br>
+　　[外装・ネジ類のパーツ](#4-あるといいもの外装ネジ類)
+
+</details>
+
+[総合計](#総合計)<br>
+[予算配分グラフ](#予算配分)
+
+</details>
+
 ---
 
 ## 一台ずつに必要なもの
 
 ### [Li-Po充電池 ￥1,900](https://www.rp-heliport.com/products/detail/13087)
 
-> Li-Po電池　乾電池より強い（笑）
+> Li-Po電池　乾電池より強い
 
 <img alt="charger" src="https://www.rp-heliport.com/html/upload/save_image/0518104254_60a31b9ec1e86.jpg" width=300>
 
