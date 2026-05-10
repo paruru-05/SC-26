@@ -1,7 +1,7 @@
 print("Hello!")
 from machine import Pin, PWM
 from utime import sleep
-import math
+import omni
 import rp2
 import time
 
@@ -80,8 +80,6 @@ def hcsr04_program():
     jmp(x_dec, "delay2") # 
     wrap()
 
-# ピンの設定 (環境に合わせて変更してください)
-# Trig: GP14, Echo: GP15 と仮定
 TRIG_PIN = 15
 ECHO_PIN = 14
 
@@ -99,6 +97,8 @@ sm = rp2.StateMachine(
 pwms=[pwmb,pwmc,pwma,pwmd]
 in1s=[bin1,cin1,ain1,din1]
 in2s=[bin2,cin2,ain2,din2]
+
+o = omni.Omni(pwms,in1s,in2s)
 
 def is_bootsel_pressed():
     return rp2.bootsel_button() == 1
@@ -128,34 +128,6 @@ pwmc.freq(10000)
 pwmc.duty_u16(0)
 pwmd.freq(10000)
 pwmd.duty_u16(0)
-    
-def turn(pwm:PWM,in1:Pin,in2:Pin,speed:float|int,brake:bool=True):
-    speed = int(speed)
-    absp = min(30000,abs(speed))
-    if speed < 0:
-        in1.off()
-        in2.on()
-    elif speed > 0:
-        in1.on()
-        in2.off()
-    else:
-        if brake:
-            in1.on()
-            in2.on()
-        else:
-            in1.off()
-            in2.off()
-    pwm.duty_u16(absp)
-    
-def omni(Vx:float,Vy:float,power:int=25000,brake:bool=True):
-    speeds = [
-        (Vx+Vy)*power,
-        (Vx-Vy)*power,
-        (-Vx-Vy)*power,
-        (-Vx+Vy)*power
-    ]
-    for i in range(4):
-        turn(pwms[i],in1s[i],in2s[i],speeds[i],brake)
 
 led.off()
 
@@ -168,36 +140,38 @@ stby2.on()
 
 sleep(0.5)
 last = None
+shikii = 30
 try:
     while True:
         if rp2.bootsel_button() == 1:
             raise ValueError("bootsel")
         distance = distanceget()
-        if distance > 15:
+        if distance > shikii:
             if last == "far":
                 vx = 1
                 vy = 0
-                omni(vx, vy,power=5000)
+                o.move(vx, vy,power=5000)
             else:
                 vx = 0
                 vy = 0
-                omni(vx, vy,power=5000)
+                o.move(vx, vy,power=5000)
                 time.sleep_ms(5)
             last = "far"
-        elif distance < 15:
+        elif distance < shikii:
             if last == "near":
                 vx = -1
                 vy = 0
-                omni(vx, vy,power=5000)
+                o.move(vx, vy,power=5000)
             else:
                 vx = 0
                 vy = 0
-                omni(vx, vy,power=5000)
+                o.move(vx, vy,power=5000)
                 time.sleep_ms(5)
             last = "near"
 except Exception as e:
     print(e)
 finally:
+    o.stop()
     led.off()
     stby.off()
     stby2.off()

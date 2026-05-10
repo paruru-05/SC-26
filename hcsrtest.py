@@ -2,6 +2,8 @@ import rp2
 from machine import Pin
 import time
 
+Pin(10,Pin.OUT).on()
+time.sleep(0.1)
 
 @rp2.asm_pio(set_init=rp2.PIO.OUT_LOW,)
 def hcsr04_program():
@@ -32,8 +34,8 @@ def hcsr04_program():
     jmp(x_dec, "delay2") # 
     wrap()
 
-TRIG_PIN = 15
-ECHO_PIN = 14
+TRIG_PIN = 12
+ECHO_PIN = 11
 
 sm = rp2.StateMachine(
     0, 
