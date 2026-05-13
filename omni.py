@@ -26,12 +26,12 @@ class Omni:
                 in2.off()
         pwm.duty_u16(absp)
         
-    def move(self,Vx:float,Vy:float,power:int=25000,brake:bool=True):
+    def move(self,Vx:float,Vy:float,power:int=25000,omega:int|float=0,brake:bool=True):
         speeds = [
-            (Vx+Vy)*power,
-            (Vx-Vy)*power,
-            (-Vx-Vy)*power,
-            (-Vx+Vy)*power
+            (Vx+Vy+omega)*power,
+            (Vx-Vy+omega)*power,
+            (-Vx-Vy+omega)*power,
+            (-Vx+Vy+omega)*power
         ]
         for i in range(4):
             self.motor(self.pwms[i],self.in1s[i],self.in2s[i],speeds[i],brake)

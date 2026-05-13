@@ -31,14 +31,11 @@ bno.set_quaternion_euler_vector(BNO_REPORT_GAME_ROTATION_VECTOR)
 print("BNO08x sensors enabling : Done\n")
 
 cpt = 0
-timer_origin = ticks_ms()
 average_delay = -1
 
 while True:
     #time.sleep(0.5)
     cpt += 1
-    
-    # 角度（オイラー角）を取得し、3番目の要素（水平方向）のみ表示
     _, _, yaw = bno.euler
     print(f"{yaw:.3f}\r",end="")
     if cpt == 10:
