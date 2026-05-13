@@ -12,20 +12,20 @@ led.on()
 
 print("setting pins...")
 #driver 1
-pwma = PWM(Pin(19))
+pwma = PWM(Pin(21))
 ain2 = Pin(20, Pin.OUT)
-ain1 = Pin(21, Pin.OUT)
+ain1 = Pin(19, Pin.OUT)
 vcc = "VCC"
 stby = Pin(3, Pin.OUT)
 gnd = "GND"
-bin1 = Pin(2, Pin.OUT)
-bin2 = Pin(1, Pin.OUT)
-pwmb = PWM(Pin(0))
+bin1 = Pin(17, Pin.OUT)
+bin2 = Pin(16, Pin.OUT)
+pwmb = PWM(Pin(12))
 
 #driver 2
-pwmc = PWM(Pin(12))
-cin2 = Pin(17, Pin.OUT)
-cin1 = Pin(16, Pin.OUT)
+pwmc = PWM(Pin(0))
+cin2 = Pin(1, Pin.OUT)
+cin1 = Pin(2, Pin.OUT)
 vcc = "VCC"
 stby2 = Pin(9, Pin.OUT)
 gnd = "GND"

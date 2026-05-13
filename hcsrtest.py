@@ -34,8 +34,8 @@ def hcsr04_program():
     jmp(x_dec, "delay2") # 
     wrap()
 
-TRIG_PIN = 12
-ECHO_PIN = 11
+TRIG_PIN = 15
+ECHO_PIN = 14
 
 sm = rp2.StateMachine(
     0, 
