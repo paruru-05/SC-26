@@ -5,11 +5,14 @@ from bno08x import *
 import omni
 import rp2
 import time
+import angler
+import math
+import random
 
-I2C1_SDA = Pin(2)
-I2C1_SCL = Pin(3)
+I2C1_SDA = Pin(0)
+I2C1_SCL = Pin(1)
 
-i2c1 = I2C(1, scl=I2C1_SCL, sda=I2C1_SDA, freq=100000, timeout=200000)
+i2c1 = I2C(0, scl=I2C1_SCL, sda=I2C1_SDA, freq=100000, timeout=200000)
 
 led = Pin("LED", Pin.OUT)
 
@@ -21,22 +24,22 @@ pwma = PWM(Pin(21))
 ain2 = Pin(20, Pin.OUT)
 ain1 = Pin(19, Pin.OUT)
 vcc = "VCC"
-stby = Pin(18, Pin.OUT)
+stby = Pin(22, Pin.OUT)
 gnd = "GND"
 bin1 = Pin(17, Pin.OUT)
 bin2 = Pin(16, Pin.OUT)
-pwmb = PWM(Pin(14))
+pwmb = PWM(Pin(18))
 
 #driver 2
-pwmc = PWM(Pin(10))
-cin2 = Pin(11, Pin.OUT)
-cin1 = Pin(12, Pin.OUT)
+pwmc = PWM(Pin(7))
+cin2 = Pin(8, Pin.OUT)
+cin1 = Pin(9, Pin.OUT)
 vcc = "VCC"
-stby2 = Pin(5, Pin.OUT)
+stby2 = Pin(13, Pin.OUT)
 gnd = "GND"
-din1 = Pin(0, Pin.OUT)
-din2 = Pin(1, Pin.OUT)
-pwmd = PWM(Pin(7))
+din1 = Pin(10, Pin.OUT)
+din2 = Pin(11, Pin.OUT)
+pwmd = PWM(Pin(12))
 
 # PIOプログラムの定義
 @rp2.asm_pio(set_init=rp2.PIO.OUT_LOW,)
@@ -99,9 +102,9 @@ ECHO_PIN = 14
 # )
 
 
-pwms=[pwmb,pwmc,pwma,pwmd]
-in1s=[bin1,cin1,ain1,din1]
-in2s=[bin2,cin2,ain2,din2]
+pwms=[pwma,pwmb,pwmc,pwmd]
+in1s=[ain1,bin1,cin1,din1]
+in2s=[ain2,bin2,cin2,din2]
 
 o = omni.Omni(pwms,in1s,in2s)
 
@@ -143,7 +146,6 @@ led.on()
 stby.on()
 stby2.on()
 
-sleep(0.5)
 bno = BNO08X(i2c1, debug=False)
 print("BNO08x I2C connection : Done\n")
 
@@ -156,17 +158,43 @@ last = None
 shikii = 30
 cpt = 0
 average_delay = -1
+
+sleep(0.01)
+bno.tare()
+goal = 90
 try:
     while True:
         if rp2.bootsel_button() == 1:
             raise ValueError("bootsel")
         _, _, yaw = bno.euler
-        if yaw > 0:
-            o.move(0,0,25000,1)
-        elif yaw < 0:
-            o.move(0,0,25000,-1)
-        
 
+        for deg in range(0,1000,1):
+            Vx = 0
+            Vy = 0.001*deg
+            o.move(Vx,Vy,25000,0,False)
+            time.sleep_ms(3)
+        for deg in range(1000,0,-1):
+            Vx = 0
+            Vy = 0.001*deg
+            o.move(Vx,Vy,25000,0,False)
+            time.sleep_ms(3)
+        for deg in range(0,1000,1):
+            Vx = 0
+            Vy = 0.001*deg
+            o.move(Vx,-Vy,25000,0,False)
+            time.sleep_ms(3)
+        for deg in range(1000,0,-1):
+            Vx = 0
+            Vy = 0.001*deg
+            o.move(Vx,-Vy,25000,0,False)
+            time.sleep_ms(3)
+
+        # if yaw > goal:
+        #     pwr = int((goal - yaw)*250)
+        #     o.move(0,0,pwr,-1)
+        # elif yaw < goal:
+        #     pwr = int((goal- yaw)*250)
+        #     o.move(0,0,pwr,1)
 
 
         # distance = distanceget()

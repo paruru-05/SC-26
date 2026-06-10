@@ -39,22 +39,22 @@ pwma = PWM(Pin(21))
 ain2 = Pin(20, Pin.OUT)
 ain1 = Pin(19, Pin.OUT)
 vcc = "VCC"
-stby = Pin(3, Pin.OUT)
+stby = Pin(22, Pin.OUT)
 gnd = "GND"
 bin1 = Pin(17, Pin.OUT)
 bin2 = Pin(16, Pin.OUT)
-pwmb = PWM(Pin(12))
+pwmb = PWM(Pin(18))
 
 #driver 2
-pwmc = PWM(Pin(0))
-cin2 = Pin(1, Pin.OUT)
-cin1 = Pin(2, Pin.OUT)
+pwmc = PWM(Pin(7))
+cin2 = Pin(8, Pin.OUT)
+cin1 = Pin(9, Pin.OUT)
 vcc = "VCC"
-stby2 = Pin(9, Pin.OUT)
+stby2 = Pin(13, Pin.OUT)
 gnd = "GND"
 din1 = Pin(10, Pin.OUT)
 din2 = Pin(11, Pin.OUT)
-pwmd = PWM(Pin(18))
+pwmd = PWM(Pin(12))
 
 print("setting PWM...")
 pwma.freq(10000)
@@ -183,8 +183,10 @@ try:
             a += 1
         if a % 2 == 0 and DOREVERSE:
             forward()
+            led.on()
         else:
             reverse()
+            led.off()
         sleep(t1[i]*0.7)
 finally:
     fin = True    

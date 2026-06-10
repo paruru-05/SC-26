@@ -14,10 +14,10 @@ import math
 from bno08x import *
 import rp2
 
-I2C1_SDA = Pin(2)
-I2C1_SCL = Pin(3)
+I2C1_SDA = Pin(0)
+I2C1_SCL = Pin(1)
 
-i2c1 = I2C(1, scl=I2C1_SCL, sda=I2C1_SDA, freq=100000, timeout=200000 )
+i2c1 = I2C(0, scl=I2C1_SCL, sda=I2C1_SDA, freq=100000, timeout=200000)
 
 bno = BNO08X(i2c1, debug=False)
 print("BNO08x I2C connection : Done\n")
@@ -39,4 +39,6 @@ while True:
     _, _, yaw = bno.euler
     print(f"{yaw:.3f}\r",end="")
     if cpt == 10:
-        bno.tare
+        bno.tare()
+    elif cpt % 30 == 0:
+        bno.tare()
