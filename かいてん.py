@@ -84,7 +84,7 @@ try:
 
         led.on()
         o.move(0,0,omega=1)
-        pwma.duty_u16(30000)x
+        pwma.duty_u16(30000)
         time.sleep(2)
         o.stop()
         time.sleep(2)
