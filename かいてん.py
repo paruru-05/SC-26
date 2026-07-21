@@ -17,14 +17,16 @@ led.on()
 print("setting pins...")
 #driver 1
 pwma = PWM(Pin(21))
-ain2 = Pin(20, Pin.OUT)
-ain1 = Pin(19, Pin.OUT)
+# ain2 = Pin(20, Pin.OUT)
+# ain1 = Pin(19, Pin.OUT)
+ain2 = Pin(19, Pin.OUT)
+ain1 = Pin(20, Pin.OUT)
 vcc = "VCC"
 stby = Pin(22, Pin.OUT)
 gnd = "GND"
 bin1 = Pin(17, Pin.OUT)
-bin2 = Pin(16, Pin.OUT)
-pwmb = PWM(Pin(18))
+bin2 = Pin(18, Pin.OUT)
+pwmb = PWM(Pin(16))
 
 #driver 2
 pwmc = PWM(Pin(7))
@@ -50,14 +52,20 @@ print("Wait for BOOTSEL...")
 # メインループの前にボタンを待つ
 
 
+for inpin in in1s:
+    inpin.on()
+for inpin in in2s:
+    inpin.off()
+
 print("setting PWM...")
 pwma.freq(10000)
+pwma.duty_u16(20000)
 pwmb.freq(10000)
-pwmb.duty_u16(30000)
+pwmb.duty_u16(20000)
 pwmc.freq(10000)
-pwmc.duty_u16(30000)
+pwmc.duty_u16(20000)
 pwmd.freq(10000)
-pwmd.duty_u16(30000)
+pwmd.duty_u16(20000)
 
 led.off()
 
@@ -84,15 +92,14 @@ try:
 
         led.on()
         o.move(0,0,omega=1)
-        pwma.duty_u16(30000)
         time.sleep(2)
         o.stop()
-        time.sleep(2)
+        time.sleep(1)
         led.off()
-        o.move(0,0,omega=1)
+        o.move(0,0,omega=-1)
         time.sleep(2)
         o.stop()
-        time.sleep(2)
+        time.sleep(1)
 except Exception as e:
     print(e)
 finally:

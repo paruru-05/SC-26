@@ -1,8 +1,7 @@
 import rp2
-from machine import Pin
+from machine import Pin, PWM
 import time
 
-Pin(10,Pin.OUT).on()
 time.sleep(0.1)
 
 @rp2.asm_pio(set_init=rp2.PIO.OUT_LOW,)
@@ -36,6 +35,7 @@ def hcsr04_program():
 
 TRIG_PIN = 15
 ECHO_PIN = 14
+LED_PIN = PWM(Pin(13),freq=10000)
 
 sm = rp2.StateMachine(
     0, 
@@ -56,6 +56,7 @@ try:
             raw_value = sm.get()
             distance = (raw_value * 2 / 125_000_000) * 34300 / 2
             print(f"距離: {distance:.2f} cm")
+            LED_PIN.duty_u16(int(max(0, min(50, distance)) * 15535 / 50))
         time.sleep(0)
 except KeyboardInterrupt:
     sm.active(0)
