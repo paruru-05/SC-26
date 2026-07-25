@@ -6,7 +6,6 @@ import omni
 import mcp3008
 import rp2
 import time
-import angler
 import math
 import random
 
@@ -15,18 +14,16 @@ led = Pin("LED", Pin.OUT)
 led.on()
 
 print("setting pins...")
-#driver 1
+
 pwma = PWM(Pin(21))
-# ain2 = Pin(20, Pin.OUT)
-# ain1 = Pin(19, Pin.OUT)
-ain2 = Pin(19, Pin.OUT)
-ain1 = Pin(20, Pin.OUT)
+ain2 = Pin(20, Pin.OUT)
+ain1 = Pin(19, Pin.OUT)
 vcc = "VCC"
 stby = Pin(22, Pin.OUT)
 gnd = "GND"
 bin1 = Pin(17, Pin.OUT)
-bin2 = Pin(18, Pin.OUT)
-pwmb = PWM(Pin(16))
+bin2 = Pin(16, Pin.OUT)
+pwmb = PWM(Pin(18))
 
 #driver 2
 pwmc = PWM(Pin(7))
@@ -38,7 +35,6 @@ gnd = "GND"
 din1 = Pin(10, Pin.OUT)
 din2 = Pin(11, Pin.OUT)
 pwmd = PWM(Pin(12))
-
 
 pwms=[pwma,pwmb,pwmc,pwmd]
 in1s=[ain1,bin1,cin1,din1]
@@ -59,13 +55,13 @@ for inpin in in2s:
 
 print("setting PWM...")
 pwma.freq(10000)
-pwma.duty_u16(20000)
+pwma.duty_u16(10000)
 pwmb.freq(10000)
-pwmb.duty_u16(20000)
+pwmb.duty_u16(10000)
 pwmc.freq(10000)
-pwmc.duty_u16(20000)
+pwmc.duty_u16(10000)
 pwmd.freq(10000)
-pwmd.duty_u16(20000)
+pwmd.duty_u16(10000)
 
 led.off()
 
@@ -91,15 +87,28 @@ try:
             raise ValueError("bootsel")
 
         led.on()
-        o.move(0,0,omega=1)
-        time.sleep(2)
-        o.stop()
-        time.sleep(1)
-        led.off()
-        o.move(0,0,omega=-1)
-        time.sleep(2)
-        o.stop()
-        time.sleep(1)
+                
+        steps = 360
+
+        for i in range(steps):
+        # 0 〜 2*pi で1周
+            t = (i / steps) * (2 * math.pi)
+
+            # 位置の微分（速度ベクトル）
+            Vx = math.cos(t)
+            Vy = math.cos(2 * t)  # ここが cos(2t) になることで途中で符号が反転する！
+            # クラスのmoveメソッドを呼び出し
+            o.move(Vx=Vx, Vy=Vy, power=20000, omega=0)
+
+            time.sleep_ms(20)
+
+        # for deg in range(360):
+        #     rad = math.radians(deg)
+            
+        #     Vx = v_target * math.cos(rad)
+        #     Vy = v_target * math.sin(rad)
+        #     o.move(0,-1,20000,-0.2)
+        #     time.sleep_ms(10)
 except Exception as e:
     print(e)
 finally:
