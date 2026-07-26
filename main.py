@@ -6,7 +6,6 @@ import omni
 import mcp3008
 import rp2
 import time
-import angler
 import math
 import random
 
