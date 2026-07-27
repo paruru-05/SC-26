@@ -2,10 +2,11 @@ from machine import Pin, PWM
 
 class Omni:
 
-    def __init__(self, pwms:list, in1s:list, in2s:list) -> None:
+    def __init__(self, pwms:list, in1s:list, in2s:list,enable:bool=True) -> None:
         self._pwms = pwms
         self._in1s = in1s
         self._in2s = in2s
+        self.MOTOR_ENABLE = enable
 
     def motor(self,pwm:PWM,in1:Pin,in2:Pin,speed:float|int,brake:bool=True):
         speed = int(speed)
@@ -33,8 +34,9 @@ class Omni:
             (-Vx + Vy + omega) * power,
             ( Vx + Vy - omega) * power
         ]
-        for i in range(4):
-            self.motor(self._pwms[i],self._in1s[i],self._in2s[i],speeds[i],brake)
+        if self.MOTOR_ENABLE:
+            for i in range(4):
+                self.motor(self._pwms[i],self._in1s[i],self._in2s[i],speeds[i],brake)
             
     def stop(self):
         for i in range(4):
