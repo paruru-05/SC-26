@@ -68,13 +68,14 @@ def kstCheck_T():
     return False
 
 def kstMove():
-    global kst_rig,kst_lft,kst_tik,losted
+    global kst_rig,kst_lft,kst_tik,losted,skwww
     o.move(0,kstzzny,10000,0)
     utime.sleep_ms(kszzntime)
     o.move(0.1,ksty*kstmv,10000,kstsnk*kstmv)
     utime.sleep_ms(kstime)
     kst_rig,kst_lft,losted=0,0,utime.ticks_ms()
     kst_tik = 600
+    skwww = ""
         
     
 def kstCheck_skw():
@@ -102,24 +103,27 @@ def kstMove_skw(dir:str):
     skwww = ""
     
 def sideTrace():
-    global lost,latestmove
+    global lost,latestmove,side,losted,skw_waitime
+    side = True
     if lost and skwtime == 0:
         if mcp.read_adc(3) < shikii_line:
-            o.move(yoko,mae*0.5,spd,senkai*2)
-            while mcp.read_adc(2) < (shikii_line):pass
-            lost = False
+            o.move(0.5,0,spd,senkai*3)
             latestmove = "l"
+            losted = utime.ticks_ms()
+            side = True
         elif mcp.read_adc(0) < shikii_line:
-            o.move(-yoko,mae*0.5,spd,-senkai*2)
-            while mcp.read_adc(1) < (shikii_line):pass
-            lost = False
+            o.move(-0.5,-0.1,spd,-senkai*3)
             latestmove = "r"
+            losted = utime.ticks_ms()
+            side = True
+        if mcp.read_adc(1) < shikii_line or mcp.read_adc(2) < shikii_line:
+            lost = False
 
 def lostCheck():
     global losted, lost
     if lost and utime.ticks_diff(utime.ticks_ms(), losted) > lostime and kst_tik < 0:
         o.stop()
-        for stp in range(50):
+        for stp in range(100):
             o.move(0,0,5000,1)
             utime.sleep_ms(10)
             # if all(mcp.read_adc(i) > shikii_line for i in range(4)):
@@ -141,9 +145,9 @@ o = omni.Omni(PWM_LIST,IN_2_LIST,IN_1_LIST,True)
 shikii_dis = 10
 dist = 0
 shikii_line = 150
-spd = 25000
+spd = 15000
 senkai = 1
-mae = 1
+mae = 0.8
 yoko = 0
 check = False
 waitime = 500
@@ -210,7 +214,8 @@ try:
                 else:
                     print("RIGHT INTERSECT?")
                     skwtime += 1
-            else:skwtime = 0
+            else:skwww = ""
+
         
             if skwtime >= skw:
                 print("RIGHT")
@@ -220,13 +225,23 @@ try:
                 print("LEFT")
                 skw_waitime = skwwait
                 kstMove_skw("lft")
+            # else:
+            #     # 反応がないときはしっかりクリア
+            #     skwtime = 0
+            #     skwww = ""
         elif skw_waitime == 1:
-            if not skwww == "T":
+            if not skwww == "T" and skw:
                 print(f"SKW {skwww}")
-        else:
+            skw_waitime = 0
+        elif skw_waitime > 0:
             skw_waitime -= 1
-        if skwww:
-            print(skwww)
+            if skw_waitime == 0:
+                # クールダウン（待機時間）が終わったら状態を完全にリセット
+                skwww = ""
+                skwtime = 0
+                
+        if skw_waitime < 0 :
+            skw_waitime = 0
 
         sideTrace()
         
