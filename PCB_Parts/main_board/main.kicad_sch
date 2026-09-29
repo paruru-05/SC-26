@@ -969,12 +969,78 @@
 		)
 		(uuid "82bafc27-2d43-4876-b1bb-c83c493d715b")
 	)
+	(text "IR"
+		(exclude_from_sim yes)
+		(at 23.368 37.846 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 132 0 0 1)
+			)
+		)
+		(uuid "1f3da0a1-429c-46b8-91eb-f53d16439c11")
+	)
+	(text "SUPERSONIC"
+		(exclude_from_sim yes)
+		(at 43.434 38.608 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 204 102 0 1)
+			)
+		)
+		(uuid "29b7d697-d2d7-4e66-84b5-79dd3c1c9cb4")
+	)
+	(text "BNO085"
+		(exclude_from_sim yes)
+		(at 42.926 27.94 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 0 132 132 1)
+			)
+		)
+		(uuid "426fe75c-7f7e-4f1a-98bf-0950b5ef5c8c")
+	)
+	(text "KICK"
+		(exclude_from_sim yes)
+		(at 41.402 20.574 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 132 132 0 1)
+			)
+		)
+		(uuid "8440968d-f796-4134-ac96-b3e5b9ea8f6b")
+	)
+	(text "UART"
+		(exclude_from_sim yes)
+		(at 24.384 26.416 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 132 0 132 1)
+			)
+		)
+		(uuid "a87cdf61-e8c2-4faf-a54f-c5f3c05748f4")
+	)
 	(text "Pico"
 		(exclude_from_sim yes)
 		(at 98.044 22.606 0)
 		(effects
 			(font
 				(size 3.81 3.81)
+				(thickness 0.4763)
 			)
 		)
 		(uuid "a9193c25-922f-4b57-afe0-42e2b63a4aeb")
@@ -990,6 +1056,19 @@
 		)
 		(uuid "acc2dbd4-0616-42ad-8e82-650a8082c2f4")
 	)
+	(text "MOTOR/I2C"
+		(exclude_from_sim yes)
+		(at 25.146 20.32 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 0 194 194 1)
+			)
+		)
+		(uuid "c852266b-bfe8-4637-aa4d-cd83f31f985d")
+	)
 	(text ""
 		(exclude_from_sim no)
 		(at 182.118 26.162 0)
@@ -999,6 +1078,19 @@
 			)
 		)
 		(uuid "cdc3613c-7dda-495f-a268-7637e1a2f763")
+	)
+	(text "DRIBBLER"
+		(exclude_from_sim yes)
+		(at 26.416 32.512 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 0 72 0 1)
+			)
+		)
+		(uuid "cf66fcf5-bc5d-4319-9aff-72ca8df4c60b")
 	)
 	(wire
 		(pts
@@ -1010,8 +1102,105 @@
 		)
 		(uuid "3d780295-094f-4b46-b356-e561cb1fadd5")
 	)
+	(wire
+		(pts
+			(xy 170.18 48.26) (xy 170.18 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47c552c9-4b2c-42c2-99bd-1d77694a2b91")
+	)
+	(label "2W_EN"
+		(at 170.18 36.83 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 132 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "0f1dc520-d0ec-487f-9c24-fdb3d6203a5d")
+	)
+	(label "DRIBBLER_PWM"
+		(at 82.55 67.31 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 72 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "12c9486a-0fc2-4b84-98fe-53ab60f52911")
+	)
+	(label "2W_UART_TX"
+		(at 153.67 54.61 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "180906b5-c495-404b-ae05-5aadbe1032ff")
+	)
+	(label "LEFT_TRIG"
+		(at 102.87 69.85 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "193f5f76-dbba-425d-86ee-5f7a27852f03")
+	)
+	(label "M2_EN"
+		(at 82.55 39.37 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "1fcfebe8-b116-4c1a-8a67-8b91d44da912")
+	)
+	(label "IR_OUT_B"
+		(at 153.67 64.77 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "1fe3ed54-a1ca-4f0a-8561-b5015d58d3be")
+	)
+	(label "IR_EN"
+		(at 153.67 52.07 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "301aa849-12f7-401e-8594-28d8bd7d3495")
+	)
+	(label "Buzzer"
+		(at 153.67 77.47 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "3056e14a-9a65-4675-9039-41f023ef456e")
+	)
 	(label "Pico_GND"
-		(at 102.87 62.23 180)
+		(at 102.87 59.69 180)
 		(effects
 			(font
 				(size 0.635 0.635)
@@ -1030,6 +1219,93 @@
 		)
 		(uuid "3751b5cf-baf2-4836-b48c-f4698d899025")
 	)
+	(label "2W_AGND"
+		(at 170.18 46.99 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "37f827e8-0543-4b2b-a19e-973ad3af1275")
+	)
+	(label "RIGHT_ECHO"
+		(at 102.87 62.23 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "3840070e-cadd-4c39-919a-23bd0167bebc")
+	)
+	(label "2W_GND"
+		(at 170.18 72.39 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "3b51c6b6-c858-41b1-82e0-3e98bb3019db")
+	)
+	(label "M2_PH"
+		(at 82.55 36.83 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "3df5ae18-6609-4b52-8247-f43d87eb8dcc")
+	)
+	(label "Pico_UART_TX"
+		(at 82.55 54.61 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "4542aaaa-00e7-40e8-a047-d6a7e006e3e9")
+	)
+	(label "M4_EN"
+		(at 82.55 52.07 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "46a7bdb8-625b-4bb0-a3ed-9403fd2215b7")
+	)
+	(label "2W_VBUS"
+		(at 170.18 29.21 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 255 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "487f730e-c75d-4655-9453-ebca764dde84")
+	)
+	(label "DRIBBLER_ENABLE"
+		(at 82.55 74.93 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 72 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "48bd856c-115c-4bec-aa93-663e97f6c363")
+	)
 	(label "Pico_VSYS"
 		(at 102.87 31.75 180)
 		(effects
@@ -1041,6 +1317,49 @@
 		)
 		(uuid "4cfcd621-bf0f-49fd-89a7-4539979201cb")
 	)
+	(label "2W_I2C_SDA"
+		(at 153.67 29.21 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "5dc8b7a7-bdaf-4c28-b322-a511b9f6a3f6")
+	)
+	(label "2W_3V3_OUT"
+		(at 170.18 39.37 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 255 153 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "60b21627-5136-4a50-a588-ec9859dcfba1")
+	)
+	(label "2W_GND"
+		(at 153.67 59.69 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "60e5decb-2308-4a39-ab2c-7ea494132323")
+	)
+	(label "Pico_UART_RX"
+		(at 82.55 57.15 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "6b03df74-4e5d-4f24-a00a-50b30fc4a1ac")
+	)
 	(label "Pico_GND"
 		(at 102.87 72.39 180)
 		(effects
@@ -1050,6 +1369,38 @@
 			(justify right bottom)
 		)
 		(uuid "76bb8c37-8482-4272-be0f-347480f2b3b7")
+	)
+	(label "RIGHT_TRIG"
+		(at 102.87 64.77 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "78068630-3a2c-476e-9545-c99ab52de748")
+	)
+	(label "2W_GND"
+		(at 153.67 46.99 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "7aa31574-fe90-49d5-b05f-3b8435dc705a")
+	)
+	(label "2W_UART_RX"
+		(at 153.67 57.15 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "7dd81f03-e5c4-4f38-8f7a-0696004f2e65")
 	)
 	(label "Pico_VBUS"
 		(at 102.87 29.21 180)
@@ -1063,7 +1414,7 @@
 		(uuid "802b9295-5eec-4b14-81a6-b006a964d84a")
 	)
 	(label "Pico_RUN"
-		(at 102.87 57.15 180)
+		(at 102.87 54.61 180)
 		(effects
 			(font
 				(size 0.635 0.635)
@@ -1084,6 +1435,91 @@
 		)
 		(uuid "898ebaea-5aac-4a1b-9dc6-92dda65d0af6")
 	)
+	(label "BNO085_NRST"
+		(at 153.67 39.37 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 132 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "89ffde3b-eb8b-4142-9088-626f85587691")
+	)
+	(label "DRV_nFAULT"
+		(at 82.55 64.77 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "8d214779-1eb0-4cd7-803b-32fb90eb086f")
+	)
+	(label "LED2"
+		(at 153.67 74.93 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "8f1d2bf0-2a8f-426a-8a5b-a41017379e6a")
+	)
+	(label "BNO085_H_INTN"
+		(at 153.67 36.83 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 132 132 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "913fcfa7-726f-450b-9ee3-80156f276eee")
+	)
+	(label "2W_GND"
+		(at 153.67 34.29 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "93a877c1-fae2-41c4-aaff-f847dbb70362")
+	)
+	(label "M3_EN"
+		(at 82.55 44.45 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "93c5961c-596b-45ba-a155-1812e4e13038")
+	)
+	(label "2W_ADC_VREF"
+		(at 170.18 41.91 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "96807f7c-5c51-4e29-b377-284f41019969")
+	)
+	(label "2W_GND"
+		(at 170.18 62.23 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "98de6610-25b5-4887-adc6-9c37c9bf572e")
+	)
 	(label "Pico_GND"
 		(at 102.87 48.26 180)
 		(effects
@@ -1093,6 +1529,17 @@
 			(justify right bottom)
 		)
 		(uuid "9ccb6083-3bbb-4577-8b08-ad72ce38b9cf")
+	)
+	(label "DRIBBLER_DIR"
+		(at 82.55 69.85 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 72 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "9efff574-acb2-436c-a4b1-ae1c164614cf")
 	)
 	(label "Pico_EN"
 		(at 102.87 36.83 180)
@@ -1105,6 +1552,48 @@
 		)
 		(uuid "a16deae1-2923-48e0-a3ab-1e0425b469c9")
 	)
+	(label "LED1"
+		(at 153.67 69.85 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "a23829b4-8f8a-4a5c-872c-879ab7a728ed")
+	)
+	(label "2W_GND"
+		(at 153.67 72.39 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "a4c1696c-427a-4e61-b0f6-d4cb7af6f9a0")
+	)
+	(label "2W_RUN"
+		(at 170.18 57.15 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 255 0 255 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "a8507618-74e3-4af0-87be-9a45787519f7")
+	)
+	(label "KICK"
+		(at 82.55 77.47 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 132 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "a8c41c36-4ead-474b-adcf-a85455030d58")
+	)
 	(label "Pico_GND"
 		(at 82.55 72.39 180)
 		(effects
@@ -1114,6 +1603,28 @@
 			(justify right bottom)
 		)
 		(uuid "aa505899-5cec-4c5d-a056-310b0e199360")
+	)
+	(label "IR_OUT_A"
+		(at 153.67 62.23 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "acea8831-c3b2-450a-bd49-d06964afe1db")
+	)
+	(label "M3_PH"
+		(at 82.55 41.91 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "b0d37790-5936-4cb6-bdb2-8227d3d224e7")
 	)
 	(label "Pico_GND"
 		(at 82.55 46.99 180)
@@ -1125,6 +1636,60 @@
 		)
 		(uuid "b1d36030-eaee-4859-9bfc-e78e0f32c8d5")
 	)
+	(label "M1_EN"
+		(at 82.55 31.75 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "ba67fd45-a553-4f94-95a4-49ee94798715")
+	)
+	(label "2W_GND"
+		(at 170.18 48.26 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "bde6e7fb-d7ee-4dca-8f3c-86b32d133d5c")
+	)
+	(label "IR_S0"
+		(at 153.67 41.91 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "c650dbcd-6ddd-4bcb-82b1-7e7242173a83")
+	)
+	(label "2W_VSYS"
+		(at 170.18 31.75 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 255 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "cfba546d-5233-4e3c-a02d-e9e4c20721bc")
+	)
+	(label "FRONT_ECHO"
+		(at 102.87 74.93 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "d5f55b1d-047e-4d9b-8d1b-0fbf5c4bf696")
+	)
 	(label "Pico_GND"
 		(at 102.87 34.29 180)
 		(effects
@@ -1135,7 +1700,39 @@
 		)
 		(uuid "d668172a-0750-422b-b500-1b099593f99e")
 	)
-	(label "Pico_3V3"
+	(label "2W_GND"
+		(at 170.18 34.29 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "d9747ff1-637e-4793-99da-7892ced64445")
+	)
+	(label "2W_I2C_SCL"
+		(at 153.67 31.75 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "e1956eda-49ed-4c69-9a40-a9c03ce68dee")
+	)
+	(label "DRV_nSLEEP"
+		(at 82.55 62.23 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "e5a65f05-6e9a-4380-b044-300ac03e5557")
+	)
+	(label "Pico_3V3_OUT"
 		(at 102.87 39.37 180)
 		(effects
 			(font
@@ -1156,6 +1753,50 @@
 		)
 		(uuid "e92e1902-9513-4ab8-99df-e45567449d4a")
 	)
+	(label "M4_PH"
+		(at 82.55 49.53 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "ec46facb-6973-4de2-a943-c6d4df3a5743")
+	)
+	(label "FRONT_TRIG"
+		(at 102.87 77.47 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "ec736e23-c805-4cf3-8868-d74a5d306d76")
+	)
+	(label "REAR_ECHO"
+		(at 102.87 52.07 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "f07b6ce7-1ee4-4545-8f7e-ff6c03fbaa2b")
+	)
+	(label "IR_S2"
+		(at 153.67 49.53 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "f09e04e3-5f4b-4cdd-9c23-54bc4c33e32b")
+	)
 	(label "Pico_AGND"
 		(at 102.87 46.99 180)
 		(effects
@@ -1167,9 +1808,63 @@
 		)
 		(uuid "f2da7b76-d528-4bcc-ac6f-7c7ac28ab53e")
 	)
+	(label "IR_S1"
+		(at 153.67 44.45 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 132 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "f5697c2b-c419-4a66-9c19-bba91021f33b")
+	)
+	(label "REAR_TRIG"
+		(at 102.87 57.15 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "f76b2836-ec10-4bf6-8fc5-841f38ae29cf")
+	)
+	(label "VBAT_ADC"
+		(at 170.18 54.61 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "f78012d7-2967-4a36-a9f4-e4b4505296b3")
+	)
+	(label "M1_PH"
+		(at 82.55 29.21 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 0 194 194 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "f8409944-0f72-4bf6-bcca-79d87888f5f9")
+	)
+	(label "LEFT_ECHO"
+		(at 102.87 67.31 180)
+		(effects
+			(font
+				(size 0.635 0.635)
+				(color 204 102 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "fb562c19-5ce2-48f5-96b9-bf6eb3330481")
+	)
 	(symbol
 		(lib_id "Connector:Conn_01x20_Socket")
-		(at 175.26 54.61 0)
+		(at 175.26 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1180,7 +1875,7 @@
 		(fields_autoplaced yes)
 		(uuid "1eca3222-ab43-4c7f-b849-8435a93f93c9")
 		(property "Reference" "J2"
-			(at 176.53 54.6099 0)
+			(at 176.53 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1191,7 +1886,7 @@
 			)
 		)
 		(property "Value" "Conn_01x20_Socket"
-			(at 176.53 57.1499 0)
+			(at 176.53 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1202,7 +1897,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical"
-			(at 175.26 54.61 0)
+			(at 175.26 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1213,7 +1908,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 54.61 0)
+			(at 175.26 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1224,7 +1919,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x20, script generated"
-			(at 175.26 54.61 0)
+			(at 175.26 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1577,7 +2272,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x20_Socket")
-		(at 158.75 54.61 0)
+		(at 158.75 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1588,7 +2283,7 @@
 		(fields_autoplaced yes)
 		(uuid "8ac780f3-c355-4ad2-9b72-6c71871af33c")
 		(property "Reference" "J1"
-			(at 160.02 54.6099 0)
+			(at 160.02 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1599,7 +2294,7 @@
 			)
 		)
 		(property "Value" "Conn_01x20_Socket"
-			(at 160.02 57.1499 0)
+			(at 160.02 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1610,7 +2305,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical"
-			(at 158.75 54.61 0)
+			(at 158.75 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1621,7 +2316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 54.61 0)
+			(at 158.75 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1632,7 +2327,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x20, script generated"
-			(at 158.75 54.61 0)
+			(at 158.75 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
