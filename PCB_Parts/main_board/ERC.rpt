@@ -1,0 +1,364 @@
+ERC report (2026-10-01T16:44:29, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1600 mils, 1000 mils): Symbol U1 Pin 11 [VM, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1600 mils, 1300 mils): Symbol U1 Pin 12 [VCP, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1600 mils, 2500 mils): Symbol U1 Pin 5 [VREF, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3200 mils, 1300 mils): Symbol #PWR01 Pin 1 [電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3200 mils, 2200 mils): Symbol U1 Pin 13 [CPH, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3200 mils, 2500 mils): Symbol U1 Pin 14 [CPL, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3450 mils, 6250 mils): Symbol U5 Pin 16 [VCC, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(4650 mils, 1300 mils): Symbol U2 Pin 12 [VCP, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(4650 mils, 2500 mils): Symbol U2 Pin 5 [VREF, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(6250 mils, 2200 mils): Symbol U2 Pin 13 [CPH, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(6250 mils, 2500 mils): Symbol U2 Pin 14 [CPL, 電源入力, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(6600 mils, 7300 mils): Symbol U121 Pin 4 [PG, オープン コレクター, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7150 mils, 6950 mils): Symbol U1211 Pin 2 [VIN, 電源入力, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(7150 mils, 7350 mils): Symbol U1211 Pin 8 [PG, オープン コレクター, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7750 mils, 1300 mils): Symbol U3 Pin 12 [VCP, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7750 mils, 2500 mils): Symbol U3 Pin 5 [VREF, 電源入力, ライン]
+[pin_to_pin]: ピンのタイプ 出力 と 出力 が接続されています
+    ; error
+    @(9350 mils, 1000 mils): Symbol U3 Pin 8 [OUT1, 出力, ライン]
+    @(12450 mils, 1000 mils): Symbol U4 Pin 8 [OUT1, 出力, ライン]
+[pin_to_pin]: ピンのタイプ 出力 と 出力 が接続されています
+    ; error
+    @(9350 mils, 1600 mils): Symbol U3 Pin 10 [OUT2, 出力, ライン]
+    @(12450 mils, 1600 mils): Symbol U4 Pin 10 [OUT2, 出力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(9350 mils, 2200 mils): Symbol U3 Pin 13 [CPH, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(9350 mils, 2500 mils): Symbol U3 Pin 14 [CPL, 電源入力, ライン]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(9600 mils, 6950 mils): Symbol U7 Pin 4 [AIN0, 入力, ライン]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(9600 mils, 7050 mils): Symbol U7 Pin 5 [AIN1, 入力, ライン]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(9600 mils, 7150 mils): Symbol U7 Pin 6 [AIN2, 入力, ライン]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(9600 mils, 7250 mils): Symbol U7 Pin 7 [AIN3, 入力, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(10400 mils, 6850 mils): Symbol U7 Pin 2 [ALERT/RDY, 出力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(10850 mils, 1300 mils): Symbol U4 Pin 12 [VCP, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(10850 mils, 2500 mils): Symbol U4 Pin 5 [VREF, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(12450 mils, 2200 mils): Symbol U4 Pin 13 [CPH, 電源入力, ライン]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(12450 mils, 2500 mils): Symbol U4 Pin 14 [CPL, 電源入力, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(13500 mils, 6300 mils): Symbol J4 Pin 7 [Pin_7, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(13500 mils, 6500 mils): Symbol J4 Pin 9 [Pin_9, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14300 mils, 7200 mils): Symbol J1 Pin 16 [Pin_16, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 6300 mils): Symbol J2 Pin 7 [Pin_7, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 6500 mils): Symbol J2 Pin 9 [Pin_9, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 6600 mils): Symbol J2 Pin 10 [Pin_10, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 6900 mils): Symbol J2 Pin 13 [Pin_13, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 7100 mils): Symbol J2 Pin 15 [Pin_15, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 7200 mils): Symbol J2 Pin 16 [Pin_16, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 7300 mils): Symbol J2 Pin 17 [Pin_17, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 7500 mils): Symbol J2 Pin 19 [Pin_19, パッシブ, ライン]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(14950 mils, 7600 mils): Symbol J2 Pin 20 [Pin_20, パッシブ, ライン]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 6250 mils): Symbol U5 [CD74HC4051PWR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 6250 mils): Label 'IR_OUT_CH5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 6350 mils): Label 'IR_OUT_CH7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 6550 mils): Label 'IR_OUT_CH8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 6650 mils): Label 'IR_OUT_CH6'
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 6850 mils): Symbol #PWR051 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 6950 mils): Symbol #PWR050 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 7950 mils): Symbol U6 [CD74HC4051PWR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 7950 mils): Label 'IR_OUT_CH13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 8050 mils): Label 'IR_OUT_CH15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 8250 mils): Label 'IR_OUT_CH16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1250 mils, 8350 mils): Label 'IR_OUT_CH14'
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 8550 mils): Symbol #PWR052 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(1250 mils, 8650 mils): Symbol #PWR053 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(2400 mils, 2100 mils): Symbol U1 [DRV8874PWPR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3200 mils, 1000 mils): Label 'MOTOR1_OUT1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3200 mils, 1600 mils): Label 'MOTOR1_OUT2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 6350 mils): Label 'IR_LING_CH3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 6450 mils): Label 'IR_LING_CH2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 6550 mils): Label 'IR_LING_CH1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 6650 mils): Label 'IR_LING_CH4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 8050 mils): Label 'IR_LING_CH11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 8150 mils): Label 'IR_LING_CH10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 8250 mils): Label 'IR_LING_CH9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(3450 mils, 8350 mils): Label 'IR_LING_CH12'
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(5450 mils, 2100 mils): Symbol U2 [DRV8874PWPR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(6250 mils, 1000 mils): Label 'MOTOR2_OUT1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(6250 mils, 1600 mils): Label 'MOTOR2_OUT2'
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(7450 mils, 7650 mils): Symbol #PWR013 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(7550 mils, 7650 mils): Symbol #PWR010 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(7650 mils, 7650 mils): Symbol #PWR011 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(7950 mils, 7150 mils): Symbol #PWR012 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(8550 mils, 2100 mils): Symbol U3 [DRV8874PWPR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(9600 mils, 6950 mils): Label 'LINE_FRONT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(9600 mils, 7050 mils): Label 'LINE_LEFT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(9600 mils, 7150 mils): Label 'LINE_RIGHT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(9600 mils, 7250 mils): Label 'LINE_REAR'
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(10000 mils, 7450 mils): Symbol #PWR054 [GND]
+[footprint_link_issues]: 現在の構成にはフットプリント ライブラリ '' が含まれていません
+    ; warning
+    @(11650 mils, 2100 mils): Symbol U4 [DRV8874PWPR]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 6700 mils): Label 'Pico_UART_TX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 6800 mils): Label 'Pico_UART_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 7200 mils): Label 'DRIBBLER_PWM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 7300 mils): Label 'DRIBBLER_DIR'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 7500 mils): Label 'DRIBBLER_ENABLE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(12700 mils, 7600 mils): Label 'KICK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 5700 mils): Label 'Pico_VBUS'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 5800 mils): Label 'Pico_VSYS'
+[multiple_net_names]: Pico_AGND と Pico_GND は、ともに同じ配線に接続されています; Pico_AGND をネットリスト用ラベルとして選択しました
+    ; warning
+    @(13500 mils, 6400 mils): Label 'Pico_AGND'
+    @(13500 mils, 5900 mils): Label 'Pico_GND'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6000 mils): Label 'Pico_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6100 mils): Label 'Pico_3V3_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6200 mils): Label 'Pico_ADC_VREF'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6600 mils): Label 'REAR_ECHO'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6700 mils): Label 'Pico_RUN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 6800 mils): Label 'REAR_TRIG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7000 mils): Label 'RIGHT_ECHO'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7100 mils): Label 'RIGHT_TRIG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7200 mils): Label 'LEFT_ECHO'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7300 mils): Label 'LEFT_TRIG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7500 mils): Label 'FRONT_ECHO'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(13500 mils, 7600 mils): Label 'FRONT_TRIG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 6000 mils): Label 'BNO085_H_INTN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 6100 mils): Label 'BNO085_NRST'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 6700 mils): Label '2W_UART_TX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 6800 mils): Label '2W_UART_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 7300 mils): Label 'LED1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 7500 mils): Label 'LED2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14300 mils, 7600 mils): Label 'Buzzer'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 5700 mils): Label '2W_VBUS'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 5800 mils): Label '2W_VSYS'
+[multiple_net_names]: 2W_AGND と 2W_GND は、ともに同じ配線に接続されています; 2W_AGND をネットリスト用ラベルとして選択しました
+    ; warning
+    @(14950 mils, 6400 mils): Label '2W_AGND'
+    @(14950 mils, 5900 mils): Label '2W_GND'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 6000 mils): Label '2W_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 6100 mils): Label '2W_3V3_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 6200 mils): Label '2W_ADC_VREF'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 6700 mils): Label 'VBAT_ADC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(14950 mils, 6800 mils): Label '2W_RUN'
+
+ ** ERC messages: 116  Errors 41  Warnings 75
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
