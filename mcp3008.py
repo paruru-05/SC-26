@@ -4,7 +4,7 @@ class mcp:
         self.spi = spi
         self.cs = cs
         cs.on()
-        print("\033[1m"+"\033[33m"+"="*23+"MCP3008"+"="*20+"\033[0m")
+        print("\033[1m"+"\033[33m"+"="*22+"MCP3008"+"="*21+"\033[0m")
     def read_adc(self, channel=0):
         # 1バイト目: 0x01 (Start bit)
         # 2バイト目: (8 + channel) << 4

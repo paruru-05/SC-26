@@ -1,35 +1,47 @@
 from machine import Pin
 import time
-from hcsr04 import HCSR04
-import omni
-from MotorConfig import *
 
+# 今使っているピン番号に書き換えてください
 TRIG_PIN = 14
 ECHO_PIN = 15
-LED_PIN = Pin("LED")
 
-hcsr = HCSR04(0,Pin(14),Pin(15))
+trig = Pin(TRIG_PIN, Pin.OUT)
+echo = Pin(ECHO_PIN, Pin.IN, Pin.PULL_DOWN)
+print("プルダウン設定後のEcho生値:", echo.value())
 
-time.sleep(0.5)
+trig.value(0)
+time.sleep_ms(100)
 
-print("計測を開始します...")
+def measure():
+    # Trigパルス (10us)
+    trig.value(1)
+    time.sleep_us(10)
+    trig.value(0)
 
-hcsr.activate()
+    # Echoが1(High)になるのを待つ
+    timeout = 100000
+    while echo.value() == 0:
+        timeout -= 1
+        if timeout <= 0:
+            return "Echo High待ちでタイムアウト (ずっとLow)"
 
-o = omni.Omni(PWM_LIST,IN_1_LIST,IN_2_LIST)
-o.move(0,1,10000,0.5)
-time.sleep(1)
-o.stop()
+    t_start = time.ticks_us()
 
-try:
-    while True:
-        dis = hcsr.distance()
-        print(f"距離: {dis:.4f} cm")
-        if dis < 20:
-            o.move(0,1,5000)
-        else:
-            o.move(0,-1,10000)
-        time.sleep(0.05)
-except KeyboardInterrupt:
-    o.stop()
-    print("止まりました")
+    # Echoが0(Low)になるのを待つ
+    timeout = 100000
+    while echo.value() == 1:
+        timeout -= 1
+        if timeout <= 0:
+            return "Echo Low待ちでタイムアウト (ずっとHigh)"
+
+    t_end = time.ticks_us()
+
+    # 経過時間(us)から距離計算 (cm)
+    duration = time.ticks_diff(t_end, t_start)
+    distance = (duration * 0.0343) / 2
+    return f"{distance:.1f} cm (duration: {duration}us)"
+
+# 5回測定
+for i in range(5):
+    print(f"[{i+1}]", measure())
+    time.sleep_ms(200)
