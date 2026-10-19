@@ -10,8 +10,7 @@ class Omni:
 
     def motor(self,pwm:PWM,in1:Pin,in2:Pin,speed:float|int,brake:bool=True):
         speed = int(speed)
-        absp = min(30000,abs(speed))
-        assert absp <= 30000
+        absp = min(60000,abs(speed))
         if speed < 0:
             in1.off()
             in2.on()
@@ -31,8 +30,7 @@ class Omni:
         speeds = [
             ( Vx + Vy + omega) * power,
             (-Vx + Vy - omega) * power,
-            (-Vx + Vy + omega) * power,
-            ( Vx + Vy - omega) * power
+        0,0
         ]
         if self.MOTOR_ENABLE:
             for i in range(4):

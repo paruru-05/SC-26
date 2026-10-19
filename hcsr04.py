@@ -22,6 +22,7 @@ class HCSR04:
         )
         print("\033[36m\033[1m[HCSR04]\033[0m\033[1m Initialize Complete.\033[0m")
         print("\033[36m\033[1m"+"="*50+"\033[0m")
+        oled_text = f"==== HCSR04 ====^^^TRIG_PIN: Pin{sub(r"\D", "", str(trig))[:-1]}^^^ECHO_PIN: Pin{sub(r"\D", "", str(echo))[:-1]}^^^MACHINE_NO: {machine_no}"
 
     def distance(self):
         self._distance_value = (self.raw_value() * 2 / 125_000_000) * 34300 / 2
