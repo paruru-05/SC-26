@@ -21383,7 +21383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
+		(property "Footprint" "EEDA:CONN-SMD_B4B-PH-SM4-TB-LF-SN"
 			(at 204.47 162.56 0)
 			(hide yes)
 			(show_name no)
