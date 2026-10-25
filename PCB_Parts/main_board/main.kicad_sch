@@ -8544,7 +8544,7 @@
 		(uuid "c6ccd62b-0d64-400e-94db-3ecd36f75e01")
 	)
 	(label "5V"
-		(at 119.38 118.11 180)
+		(at 127 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8976,7 +8976,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "10uF"
 			(at 86.36 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10538,7 +10538,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22nF"
+		(property "Value" "22uF"
 			(at 158.75 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11849,7 +11849,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 123.19 118.11 270)
+		(at 127 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11860,27 +11860,29 @@
 		(fields_autoplaced yes)
 		(uuid "2d2b21cb-0f17-49df-8b38-23e0ece30802")
 		(property "Reference" "C28"
-			(at 123.19 110.49 90)
+			(at 130.81 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "10nF"
-			(at 123.19 113.03 90)
+		(property "Value" "10uF"
+			(at 130.81 115.5699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 119.38 119.0752 0)
+			(at 127.9652 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11891,7 +11893,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 118.11 0)
+			(at 127 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11902,7 +11904,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 123.19 118.11 0)
+			(at 127 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15169,6 +15171,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 127 110.49 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57ce2f84-8f30-4146-848e-9f539a925e06")
+		(property "Reference" "#PWR097"
+			(at 133.35 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 130.81 110.4899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "059da33f-53e6-4871-be7e-0733df78f26b")
+		)
+		(instances
+			(project "main"
+				(path "/2092c9bc-9fbe-439d-a80c-904a7787fec4"
+					(reference "#PWR097")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 83.82 69.85 0)
 		(unit 1)
@@ -17803,7 +17884,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22nF"
+		(property "Value" "22uF"
 			(at 111.76 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
