@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.25,
-          "width": 0.6
+          "height": 3.0,
+          "width": 3.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -60,13 +60,13 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.127,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
-          "pad_connection": 1,
+          "min_thickness": 0.1,
+          "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -76,7 +76,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "track_not_centered_on_via|46443000|127343000|7ee946ff-9cab-465a-9f64-1f52b263d558|5d2dd6d7-249a-473f-8b49-fe8b482817e6",
+          "意図的"
+        ],
+        [
+          "track_not_centered_on_via|46443000|127343000|8755f935-b451-4132-8317-d84522f15861|5d2dd6d7-249a-473f-8b49-fe8b482817e6",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -97,7 +106,7 @@
         "footprint_filters_mismatch": "ignore",
         "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_to_hole": "warning",
         "holes_co_located": "warning",
@@ -111,7 +120,7 @@
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "error",
         "missing_footprint": "warning",
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
@@ -133,12 +142,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
-        "track_not_centered_on_via": "ignore",
+        "track_not_centered_on_via": "error",
         "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
-        "tuning_profile_track_geometries": "ignore",
+        "tuning_profile_track_geometries": "error",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -146,7 +155,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.127,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -178,6 +187,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -189,6 +199,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -200,6 +211,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -212,14 +224,29 @@
       "track_widths": [
         0.0,
         0.1,
+        0.2,
         0.25,
         0.3,
+        0.4,
         0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
         1.0,
+        1.25,
+        1.5,
         2.0,
         2.5,
         3.0,
+        3.5,
+        4.0,
+        4.5,
         5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
         10.0
       ],
       "tuning_pattern_settings": {
@@ -540,8 +567,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -693,7 +720,7 @@
         "uuid": "2092c9bc-9fbe-439d-a80c-904a7787fec4"
       }
     ],
-    "used_designators": "R1-18,#FLG1-4,J1-22,#PWR1-79,D1-6,L1-2,C1-24,F1,LS1,SW1-2,TP1-12,U1-9",
+    "used_designators": "#FLG1-4,#PWR1-97,C1-28,D1-6,F1,J1-22,L1-2,LS1,R1-23,SW1-2,TP1-12,U1-9",
     "variants": []
   },
   "sheets": [

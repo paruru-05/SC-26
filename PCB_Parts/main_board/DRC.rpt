@@ -1,0 +1,384 @@
+** Drc report for main.kicad_pcb **
+** Created on 2026-10-24T21:44:08 **
+** Report includes: Errors, Warnings **
+
+** Found 54 DRC violations **
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(39.3600 mm, 95.0200 mm): セグメント of U2 、F.Silkscreen 上
+    @(39.3200 mm, 96.7000 mm): J6のリファレンスフィールド
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(39.3200 mm, 108.8250 mm): J10のリファレンスフィールド
+    @(39.3600 mm, 106.9746 mm): セグメント of U3 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(39.3600 mm, 119.2500 mm): セグメント of U4 、F.Silkscreen 上
+    @(39.3200 mm, 120.9500 mm): J18のリファレンスフィールド
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(71.1200 mm, 65.4050 mm): 基板上のテキスト 'Pico' ( F.Silkscreen 上)
+    @(73.2800 mm, 92.3100 mm): 円 of TP6 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(139.1950 mm, 66.3850 mm): D3のリファレンスフィールド
+    @(141.4800 mm, 66.8100 mm): セグメント of D4 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(141.4800 mm, 63.4200 mm): セグメント of D3 、F.Silkscreen 上
+    @(139.1950 mm, 62.9950 mm): D2のリファレンスフィールド
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(139.1950 mm, 59.6050 mm): D1のリファレンスフィールド
+    @(141.4800 mm, 60.0300 mm): セグメント of D2 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(139.1950 mm, 69.7750 mm): D4のリファレンスフィールド
+    @(137.5950 mm, 69.0800 mm): セグメント of D4 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(43.7200 mm, 71.7150 mm): D6のリファレンスフィールド
+    @(45.7200 mm, 72.2300 mm): R17のリファレンスフィールド
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(45.7200 mm, 74.1350 mm): R14のリファレンスフィールド
+    @(45.4827 mm, 74.1825 mm): セグメント of R17 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(47.6250 mm, 62.0700 mm): R15のリファレンスフィールド
+    @(47.1977 mm, 62.1175 mm): セグメント of R16 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(58.5175 mm, 72.0950 mm): C21のリファレンスフィールド
+    @(56.3400 mm, 71.7000 mm): 円 of TP3 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(56.3400 mm, 69.2020 mm): TP3のリファレンスフィールド
+    @(55.2565 mm, 65.4960 mm): セグメント of L2 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(56.6175 mm, 69.3050 mm): セグメント of U6 、F.Silkscreen 上
+    @(56.3400 mm, 69.2020 mm): TP3のリファレンスフィールド
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(51.4350 mm, 69.8920 mm): TP4のリファレンスフィールド
+    @(50.9485 mm, 69.8040 mm): セグメント of L2 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(39.3200 mm, 84.5750 mm): J4のリファレンスフィールド
+    @(39.6250 mm, 82.9746 mm): セグメント of U1 、F.Silkscreen 上
+[silk_overlap]: Silkscreen clearance
+    Rule: 基板の設定のシルクスクリーンの制約; warning
+    @(51.9294 mm, 85.6000 mm): セグメント of C13 、F.Silkscreen 上
+    @(52.0700 mm, 86.2000 mm): C9のリファレンスフィールド
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 96.5200 mm): U2のリファレンスフィールド
+    @(41.9100 mm, 96.5454 mm): パッド 17 [GND] - U2 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 96.5200 mm): U2のリファレンスフィールド
+    @(40.1842 mm, 95.2900 mm): ポリゴン of U2 、F.Mask 上
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3600 mm, 95.0200 mm): セグメント of U2 、F.Silkscreen 上
+    @(41.9100 mm, 96.5454 mm): パッド 17 [GND] - U2 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 108.4746 mm): U3のリファレンスフィールド
+    @(41.9100 mm, 108.5000 mm): パッド 17 [GND] - U3 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 108.4746 mm): U3のリファレンスフィールド
+    @(40.1842 mm, 107.2446 mm): ポリゴン of U3 、F.Mask 上
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3200 mm, 108.8250 mm): J10のリファレンスフィールド
+    @(41.9100 mm, 108.5000 mm): パッド 17 [GND] - U3 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 120.7500 mm): U4のリファレンスフィールド
+    @(41.9100 mm, 120.7754 mm): パッド 17 [GND] - U4 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.9100 mm, 120.7500 mm): U4のリファレンスフィールド
+    @(40.1842 mm, 119.5200 mm): ポリゴン of U4 、F.Mask 上
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3600 mm, 106.9746 mm): セグメント of U3 、F.Silkscreen 上
+    @(41.9100 mm, 108.5000 mm): パッド 17 [GND] - U3 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3200 mm, 120.9500 mm): J18のリファレンスフィールド
+    @(41.9100 mm, 120.7754 mm): パッド 17 [GND] - U4 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3600 mm, 119.2500 mm): セグメント of U4 、F.Silkscreen 上
+    @(41.9100 mm, 120.7754 mm): パッド 17 [GND] - U4 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(71.1200 mm, 65.4050 mm): 基板上のテキスト 'Pico' ( F.Silkscreen 上)
+    @(73.2800 mm, 92.3100 mm): PTHパッド 1 [/DRV_nFAULT] (TP6)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(42.1750 mm, 84.4746 mm): U1のリファレンスフィールド
+    @(42.1750 mm, 84.5000 mm): パッド 17 [GND] - U1 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(42.1750 mm, 84.4746 mm): U1のリファレンスフィールド
+    @(40.4492 mm, 83.2446 mm): ポリゴン of U1 、F.Mask 上
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3200 mm, 96.7000 mm): J6のリファレンスフィールド
+    @(41.9100 mm, 96.5454 mm): パッド 17 [GND] - U2 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.4790 mm, 74.6150 mm): U9のリファレンスフィールド
+    @(42.5450 mm, 75.5650 mm): パッド 1 [Net-(U9-G)] - U9 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.4790 mm, 74.6150 mm): U9のリファレンスフィールド
+    @(40.4130 mm, 74.6150 mm): パッド 3 [/KICK_SW] - U9 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.4790 mm, 74.6150 mm): U9のリファレンスフィールド
+    @(42.5450 mm, 73.6650 mm): パッド 2 [GND] - U9 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(45.7200 mm, 74.1350 mm): R14のリファレンスフィールド
+    @(44.8950 mm, 73.6600 mm): パッド 1 [Net-(U9-G)] - R17 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(45.7200 mm, 74.1350 mm): R14のリファレンスフィールド
+    @(46.5450 mm, 73.6600 mm): パッド 2 [GND] - R17 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(47.6250 mm, 62.0700 mm): R15のリファレンスフィールド
+    @(46.6100 mm, 61.5950 mm): パッド 1 [Net-(U8-G)] - R16 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(47.6250 mm, 62.0700 mm): R15のリファレンスフィールド
+    @(48.2600 mm, 61.5950 mm): パッド 2 [GND] - R16 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(43.3840 mm, 62.5500 mm): U8のリファレンスフィールド
+    @(44.4500 mm, 63.5000 mm): パッド 1 [Net-(U8-G)] - U8 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(43.3840 mm, 62.5500 mm): U8のリファレンスフィールド
+    @(44.4500 mm, 61.6000 mm): パッド 2 [GND] - U8 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(43.3840 mm, 62.5500 mm): U8のリファレンスフィールド
+    @(42.3180 mm, 62.5500 mm): パッド 3 [/DRIB_MOTOR_SW] - U8 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.3400 mm, 69.2020 mm): TP3のリファレンスフィールド
+    @(57.4775 mm, 69.1575 mm): パッド 5 [GND] - U6 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4350 mm, 69.8920 mm): TP4のリファレンスフィールド
+    @(53.1025 mm, 68.8350 mm): パッド 1 [Net-(L2-Pad1)] - L2 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.3200 mm, 84.5750 mm): J4のリファレンスフィールド
+    @(42.1750 mm, 84.5000 mm): パッド 17 [GND] - U1 ( F.Cu 上)
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.6250 mm, 82.9746 mm): セグメント of U1 、F.Silkscreen 上
+    @(42.1750 mm, 84.5000 mm): パッド 17 [GND] - U1 ( F.Cu 上)
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(35.7820 mm, 67.0880 mm): 配線 [/VBAT_FUSED] ( F.Cu 上、長さ: 0.0028 mm )
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(45.7530 mm, 111.3872 mm): ビア [Net-(U3-CPH)] (F.Cu - B.Cu 上)
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(50.1126 mm, 127.3526 mm): 配線 [/VBAT_FUSED] ( F.Cu 上、長さ: 0.0811 mm )
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(61.6725 mm, 68.6575 mm): ビア [/VBAT_FUSED] (F.Cu - B.Cu 上)
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(46.2100 mm, 125.8200 mm): 配線 [/VBAT_FUSED] ( B.Cu 上、長さ: 0.3295 mm )
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(46.4430 mm, 125.5870 mm): 配線 [/VBAT_FUSED] ( B.Cu 上、長さ: 0.1500 mm )
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(66.6814 mm, 57.9940 mm): ビア [/5V] (F.Cu - B.Cu 上)
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(60.0500 mm, 88.3000 mm): 配線 [/DRV_nSLEEP] ( B.Cu 上、長さ: 1.2970 mm )
+
+** Found 23 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(48.4676 mm, 97.3626 mm): 配線 [GND] ( F.Cu 上、長さ: 0.2937 mm )
+    @(49.1300 mm, 94.8300 mm): 配線 [GND] ( B.Cu 上、長さ: 1.1738 mm )
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(52.7050 mm, 118.1100 mm): パッド 1 [/3V3_AUX] - R4 ( F.Cu 上)
+    @(80.0150 mm, 134.1800 mm): パッド 1 [/3V3_AUX] - J9 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(53.0850 mm, 106.0450 mm): パッド 1 [/3V3_AUX] - R3 ( F.Cu 上)
+    @(53.1987 mm, 93.8663 mm): 配線 [/3V3_AUX] ( F.Cu 上、長さ: 0.1608 mm )
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(53.0850 mm, 106.0450 mm): パッド 1 [/3V3_AUX] - R3 ( F.Cu 上)
+    @(52.7050 mm, 118.1100 mm): パッド 1 [/3V3_AUX] - R4 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(103.3650 mm, 134.3200 mm): パッド 1 [/3V3_AUX] - J17 ( F.Cu 上)
+    @(125.3650 mm, 134.5100 mm): パッド 2 [/3V3_AUX] - J1 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(103.3650 mm, 134.3200 mm): パッド 1 [/3V3_AUX] - J17 ( F.Cu 上)
+    @(80.0150 mm, 134.1800 mm): パッド 1 [/3V3_AUX] - J9 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.1600 mm, 81.9650 mm): パッド 1 [/3V3_AUX] - J15 ( F.Cu 上)
+    @(152.3200 mm, 81.9650 mm): パッド 1 [/3V3_AUX] - J7 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.1600 mm, 81.9650 mm): パッド 1 [/3V3_AUX] - J15 ( F.Cu 上)
+    @(142.2700 mm, 97.4750 mm): パッド 1 [/3V3_AUX] - J16 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.2700 mm, 97.4750 mm): パッド 1 [/3V3_AUX] - J16 ( F.Cu 上)
+    @(130.1750 mm, 100.6000 mm): パッド 8 [/3V3_AUX] - U7 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.2700 mm, 112.2550 mm): パッド 2 [/3V3_AUX] - J21 ( F.Cu 上)
+    @(142.2700 mm, 97.4750 mm): パッド 1 [/3V3_AUX] - J16 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.2700 mm, 124.9550 mm): パッド 2 [/3V3_AUX] - J22 ( F.Cu 上)
+    @(142.2700 mm, 112.2550 mm): パッド 2 [/3V3_AUX] - J21 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.2700 mm, 124.9550 mm): パッド 2 [/3V3_AUX] - J22 ( F.Cu 上)
+    @(125.3650 mm, 134.5100 mm): パッド 2 [/3V3_AUX] - J1 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.4300 mm, 97.4750 mm): パッド 1 [/3V3_AUX] - J8 ( F.Cu 上)
+    @(142.2700 mm, 97.4750 mm): パッド 1 [/3V3_AUX] - J16 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.4300 mm, 112.2550 mm): パッド 2 [/3V3_AUX] - J19 ( F.Cu 上)
+    @(142.2700 mm, 112.2550 mm): パッド 2 [/3V3_AUX] - J21 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.4300 mm, 124.9550 mm): パッド 2 [/3V3_AUX] - J20 ( F.Cu 上)
+    @(142.2700 mm, 124.9550 mm): パッド 2 [/3V3_AUX] - J22 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(40.9350 mm, 99.4700 mm): パッド 11 [/VBAT_FUSED] - U2 ( F.Cu 上)
+    @(41.4100 mm, 102.5300 mm): パッド 2 [/VBAT_FUSED] - C10 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(40.9350 mm, 99.4700 mm): パッド 11 [/VBAT_FUSED] - U2 ( F.Cu 上)
+    @(46.7100 mm, 97.1550 mm): パッド 2 [/VBAT_FUSED] - C2 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(46.5300 mm, 109.2200 mm): 配線 [/VBAT_FUSED] ( F.Cu 上、長さ: 0.7778 mm )
+    @(41.4100 mm, 102.5300 mm): パッド 2 [/VBAT_FUSED] - C10 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(46.8500 mm, 85.0900 mm): パッド 2 [/VBAT_FUSED] - C1 ( F.Cu 上)
+    @(48.5400 mm, 87.6300 mm): パッド 1 [/VBAT_FUSED] - C5 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(46.8500 mm, 85.0900 mm): パッド 2 [/VBAT_FUSED] - C1 ( F.Cu 上)
+    @(41.2000 mm, 87.4246 mm): パッド 11 [/VBAT_FUSED] - U1 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(48.4000 mm, 99.6950 mm): パッド 1 [/VBAT_FUSED] - C6 ( F.Cu 上)
+    @(46.7100 mm, 97.1550 mm): パッド 2 [/VBAT_FUSED] - C2 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(48.5400 mm, 87.6300 mm): パッド 1 [/VBAT_FUSED] - C5 ( F.Cu 上)
+    @(52.8450 mm, 87.6300 mm): パッド 2 [/VBAT_FUSED] - C9 ( F.Cu 上)
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(49.8104 mm, 76.8904 mm): 配線 [/VBAT_FUSED] ( F.Cu 上、長さ: 11.9356 mm )
+    @(46.8500 mm, 85.0900 mm): パッド 2 [/VBAT_FUSED] - C1 ( F.Cu 上)
+
+** Found 22 Footprint errors **
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(126.3650 mm, 133.3500 mm): フットプリント J1
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B4B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(151.1600 mm, 78.9650 mm): フットプリント J7
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(151.1600 mm, 78.9650 mm): フットプリント J7
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B4B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(151.2700 mm, 94.4750 mm): フットプリント J8
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(151.2700 mm, 94.4750 mm): フットプリント J8
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B8B-PH-SM4-TB-A はシンボル ( Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(87.0150 mm, 133.0500 mm): フットプリント J9
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(87.0150 mm, 133.0500 mm): フットプリント J9
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B4B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(141.0000 mm, 78.9650 mm): フットプリント J15
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(141.0000 mm, 78.9650 mm): フットプリント J15
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B4B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(141.1100 mm, 94.4750 mm): フットプリント J16
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(141.1100 mm, 94.4750 mm): フットプリント J16
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_5P-P2.00_B6B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(107.3650 mm, 133.2000 mm): フットプリント J17
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(107.3650 mm, 133.2000 mm): フットプリント J17
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B3B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(151.2700 mm, 112.2550 mm): フットプリント J19
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(151.2700 mm, 112.2550 mm): フットプリント J19
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B3B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(151.2700 mm, 124.9550 mm): フットプリント J20
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(151.2700 mm, 124.9550 mm): フットプリント J20
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B3B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(141.1100 mm, 112.2550 mm): フットプリント J21
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(141.1100 mm, 112.2550 mm): フットプリント J21
+[footprint_symbol_mismatch]: EEDA:CONN-SMD_B3B-PH-SM4-TB-LF-SN はシンボル ( Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical ) によって指定されたフットプリントと一致しません
+    Local override; warning
+    @(141.1100 mm, 124.9550 mm): フットプリント J22
+[footprint_symbol_field_mismatch]: フィールド 'Description' が異なります(プリント基板図: '', 回路図: 'Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(141.1100 mm, 124.9550 mm): フットプリント J22
+[net_conflict]: パッドのネット(Net-(U5-SW))は、回路図(/3V3_AUX)で指定されたネットと一致しません
+    Local override; warning
+    @(55.0225 mm, 61.1000 mm): パッド 6 [Net-(U5-SW)] - U5 ( F.Cu 上)
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
