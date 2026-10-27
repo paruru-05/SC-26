@@ -996,6 +996,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 107.95 48.26)
@@ -1040,6 +1155,12 @@
 		(uuid "6a5bcc60-53d8-4a6e-b91f-05830f3841ac")
 	)
 	(junction
+		(at 33.02 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f034342-1818-477e-9ee6-58505c6528f4")
+	)
+	(junction
 		(at 82.55 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1056,12 +1177,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "82d0dfbd-ae5a-425e-b5c2-2f91d9eb72e5")
-	)
-	(junction
-		(at 33.02 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ad7f4e8-e55d-4aea-adab-b2f0db311e26")
 	)
 	(junction
 		(at 82.55 96.52)
@@ -1153,6 +1268,16 @@
 		)
 		(uuid "1be2c663-3924-47a5-ab15-8bf2e8c44cc3")
 	)
+	(label "IR15"
+		(at 43.18 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ed10869-9386-45cd-8890-f07e0aab6b2a")
+	)
 	(label "3v3"
 		(at 100.33 48.26 180)
 		(effects
@@ -1162,16 +1287,6 @@
 			(justify right bottom)
 		)
 		(uuid "267ff09c-c70f-41dc-ad65-85afa2ff3b57")
-	)
-	(label "IR8"
-		(at 82.55 48.26 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "33416412-f64f-4841-bfd7-97fbe5fbbacf")
 	)
 	(label "IR3"
 		(at 82.55 26.67 90)
@@ -1213,6 +1328,16 @@
 		)
 		(uuid "497b267c-5cec-461d-b3cb-f47446bf6469")
 	)
+	(label "IR2"
+		(at 30.48 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a9b66b3-2699-4ebf-b541-6bd6eaa7b521")
+	)
 	(label "3v3"
 		(at 100.33 26.67 180)
 		(effects
@@ -1223,6 +1348,46 @@
 		)
 		(uuid "5201050e-1a74-414f-8a7b-41e3f2598f77")
 	)
+	(label "IR14"
+		(at 43.18 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "56af82fa-6f5b-4f60-9aca-3495771330fa")
+	)
+	(label "IR12"
+		(at 43.18 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "56e434e8-4c18-4977-ac9f-d7e750bc182f")
+	)
+	(label "IR9"
+		(at 43.18 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65c29233-6202-46d2-aff7-37a78b345d22")
+	)
+	(label "IR3"
+		(at 30.48 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "682bb403-1275-494f-ba5d-4cf5db2e214c")
+	)
 	(label "3v3"
 		(at 49.53 26.67 180)
 		(effects
@@ -1232,6 +1397,16 @@
 			(justify right bottom)
 		)
 		(uuid "6adef8d9-421a-4570-84c8-1b87329a364c")
+	)
+	(label "IR5"
+		(at 30.48 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70f153e2-1402-4740-8de2-9133f814a98b")
 	)
 	(label "IR9"
 		(at 107.95 48.26 90)
@@ -1253,6 +1428,16 @@
 		)
 		(uuid "7ed0a849-8240-4f2e-a676-79f4080af7c4")
 	)
+	(label "IR11"
+		(at 43.18 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "85a86b5c-af11-4613-9bb2-9633ea020b75")
+	)
 	(label "3v3"
 		(at 125.73 73.66 180)
 		(effects
@@ -1273,6 +1458,16 @@
 		)
 		(uuid "986995fd-92cb-49bd-a9db-f0d99257e71d")
 	)
+	(label "IR1"
+		(at 30.48 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b094f6e-cbf9-4e3b-aff6-0e90ed94b654")
+	)
 	(label "3v3"
 		(at 74.93 26.67 180)
 		(effects
@@ -1282,6 +1477,16 @@
 			(justify right bottom)
 		)
 		(uuid "9b784fc6-219b-486f-8300-3f30cdf38341")
+	)
+	(label "IR7"
+		(at 30.48 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a078372f-81f6-4959-9015-72afe9191054")
 	)
 	(label "IR14"
 		(at 107.95 73.66 90)
@@ -1302,6 +1507,26 @@
 			(justify right bottom)
 		)
 		(uuid "a30fa46f-e14e-4471-a996-8b44ec71a2eb")
+	)
+	(label "IR10"
+		(at 43.18 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aa013391-5810-46c6-ad65-c87f333b10ab")
+	)
+	(label "IR4"
+		(at 30.48 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acb6f936-bd2d-4df2-8b74-f0b82a93f4a5")
 	)
 	(label "IR6"
 		(at 33.02 48.26 90)
@@ -1332,6 +1557,16 @@
 			(justify left bottom)
 		)
 		(uuid "b467776b-18e2-48f2-a15c-0aba2467ee2d")
+	)
+	(label "IR13"
+		(at 43.18 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b86f3bc4-4aad-40da-abbf-422efacbcb54")
 	)
 	(label "IR2"
 		(at 57.15 26.67 90)
@@ -1373,6 +1608,36 @@
 		)
 		(uuid "bfbcdd74-8900-4147-994a-227797dde5c4")
 	)
+	(label "IR8"
+		(at 82.55 48.26 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c2e7c0ca-c81c-4def-87cf-1ee28ffbe26d")
+	)
+	(label "IR16"
+		(at 43.18 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca9cc4be-ca1c-4350-a0d5-42f4eef81df7")
+	)
+	(label "3v3"
+		(at 30.48 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb4d9b97-0f84-4319-9058-56d94fb12dfd")
+	)
 	(label "IR12"
 		(at 57.15 73.66 90)
 		(effects
@@ -1382,6 +1647,26 @@
 			(justify left bottom)
 		)
 		(uuid "d1724952-808c-4b1d-853b-4bf2c1477382")
+	)
+	(label "3v3"
+		(at 64.77 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d9641643-1257-47d2-afff-602113b61a67")
+	)
+	(label "3v3"
+		(at 43.18 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3a3d31c-1ebf-4598-a584-37cb395efd06")
 	)
 	(label "3v3"
 		(at 74.93 73.66 180)
@@ -1403,6 +1688,16 @@
 		)
 		(uuid "f1a12a60-76d3-408f-8ed5-4338d97e338f")
 	)
+	(label "IR6"
+		(at 30.48 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f4342e1f-09dd-4e55-a113-ec983ba4c5ac")
+	)
 	(label "3v3"
 		(at 25.4 73.66 180)
 		(effects
@@ -1412,6 +1707,16 @@
 			(justify right bottom)
 		)
 		(uuid "f631abc1-d343-4eec-924c-79d30fca3564")
+	)
+	(label "IR8"
+		(at 30.48 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc679d1f-5fbd-4083-98ab-078fcb64bce6")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1684,6 +1989,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 64.77 115.57 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0eb723ce-27a8-4183-b663-1733784e148d")
+		(property "Reference" "#FLG01"
+			(at 64.77 117.475 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 64.77 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 64.77 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2a85150-7f4a-4799-b843-1ab22df801b1")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 86.36 26.67 90)
 		(unit 1)
@@ -1715,7 +2098,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.36 28.448 90)
 			(hide yes)
 			(show_name no)
@@ -1737,7 +2120,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 86.36 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -1877,7 +2260,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 137.16 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -1899,7 +2282,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 137.16 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -2039,7 +2422,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.76 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -2061,7 +2444,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 111.76 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -2500,7 +2883,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.36 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -2522,7 +2905,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 86.36 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -3126,7 +3509,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.36 98.298 90)
 			(hide yes)
 			(show_name no)
@@ -3148,7 +3531,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 86.36 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -3479,7 +3862,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 60.96 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -3501,7 +3884,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 60.96 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -3943,7 +4326,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 60.96 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -3965,7 +4348,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 60.96 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4074,84 +4457,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 40.64 26.67 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "63953b1b-c7d2-4205-9b1b-5502147de869")
-		(property "Reference" "#PWR01"
-			(at 40.64 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 40.64 21.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 40.64 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "36616d4f-a523-4b47-a628-1c5ccda4e709")
-		)
-		(instances
-			(project "IR_sensor_ring"
-				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 111.76 48.26 90)
 		(unit 1)
@@ -4183,7 +4488,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.76 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -4205,7 +4510,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 111.76 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -4684,7 +4989,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 36.83 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -4706,7 +5011,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 36.83 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4764,7 +5069,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 36.83 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -4786,7 +5091,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 36.83 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -5080,7 +5385,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 137.16 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -5102,7 +5407,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 137.16 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -5123,6 +5428,110 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x10")
+		(at 38.1 116.84 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "830deff9-4362-400e-b56b-31e5f6f72408")
+		(property "Reference" "J2"
+			(at 38.1 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x10"
+			(at 38.1 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EEDA:CONN-SMD_B10B-PH-SM4-TB-LF-SN"
+			(at 38.1 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 38.1 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "e9f1a76d-2416-444d-89a2-757b02b66739")
+		)
+		(pin "3"
+			(uuid "2f16e097-7851-4757-8f97-230b7eef3a37")
+		)
+		(pin "1"
+			(uuid "d7ead216-b5ed-48ad-878f-2af4d675ec98")
+		)
+		(pin "2"
+			(uuid "6a0f85e0-33dc-4ad1-b465-02a35ecedeee")
+		)
+		(pin "4"
+			(uuid "1bdcec96-4f98-4115-b557-cca2d3023b35")
+		)
+		(pin "5"
+			(uuid "39ecd134-b4f6-436e-86b7-e38c773be52a")
+		)
+		(pin "7"
+			(uuid "26566d3c-00ce-4af2-a388-a761cab176c5")
+		)
+		(pin "6"
+			(uuid "f70802fb-0e67-4213-96c9-6ee41f26abf8")
+		)
+		(pin "9"
+			(uuid "3bc2527c-c3e0-4943-b442-d7457978df4f")
+		)
+		(pin "10"
+			(uuid "5069fea0-3930-46ab-9242-c4a7bdc1a710")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5284,86 +5693,6 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 36.83 26.67 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8b1e60e3-0c6f-4e4b-b093-ec9c9e47cc68")
-		(property "Reference" "R1"
-			(at 36.83 20.32 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47kΩ"
-			(at 36.83 22.86 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
-			(at 36.83 28.448 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 36.83 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b26236b6-bfd5-42dd-9385-3f43805854bf")
-		)
-		(pin "2"
-			(uuid "4c7cf261-6fce-4f7f-b1a8-4bbacf3d9758")
-		)
-		(instances
-			(project "IR_sensor_ring"
-				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5565,8 +5894,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 33.02 34.29 90)
+		(lib_id "Device:C")
+		(at 33.02 30.48 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5575,20 +5904,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "96207c1c-1339-4500-8e13-194003655261")
-		(property "Reference" "#PWR02"
-			(at 39.37 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 36.83 34.2899 90)
+		(uuid "944805fe-722d-4d7c-a65e-cf28565d8c93")
+		(property "Reference" "C1"
+			(at 36.83 29.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5598,8 +5916,19 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 33.02 34.29 0)
+		(property "Value" "2.2nF"
+			(at 36.83 31.7499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 32.0548 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5610,7 +5939,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 34.29 0)
+			(at 33.02 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5620,8 +5949,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 34.29 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 33.02 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5632,12 +5961,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "b9f7ed25-0072-4de0-b4bf-05dfe13b4317")
+			(uuid "bf8a373e-4de5-436b-b298-f6910b9c94b8")
+		)
+		(pin "2"
+			(uuid "dec05cb7-05f1-4370-be00-1e6b1763d9b3")
 		)
 		(instances
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "#PWR02")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -5754,7 +6086,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 86.36 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -5776,7 +6108,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 86.36 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -6031,6 +6363,163 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 43.18 127 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1dfb1d1-072e-472b-bb4f-bfa68ca6d314")
+		(property "Reference" "#PWR034"
+			(at 49.53 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.99 126.9999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 43.18 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3b279ccb-177e-4df3-b860-523523ab8a2e")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 71.12 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a955c09e-8b17-41fe-a0d3-f2ba6ceb2b28")
+		(property "Reference" "#FLG02"
+			(at 71.12 113.665 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 71.12 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e66002af-012d-4d30-b207-32a9b31325d5")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -6550,6 +7039,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 36.83 26.67 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b05c7104-6bc3-40ac-a659-73511823508e")
+		(property "Reference" "R1"
+			(at 36.83 20.32 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47kΩ"
+			(at 36.83 22.86 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 36.83 28.448 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 36.83 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a5d37e0-2eeb-4077-8717-c60cd553b8f9")
+		)
+		(pin "2"
+			(uuid "0d3b10c2-4d50-4e08-ba58-43d16ad9e9be")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 133.35 55.88 90)
 		(unit 1)
@@ -6817,7 +7386,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 60.96 28.448 90)
 			(hide yes)
 			(show_name no)
@@ -6839,7 +7408,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 60.96 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -6973,6 +7542,85 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 33.02 34.29 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c6ac96ae-0efa-483b-ad4c-3f88de1be63b")
+		(property "Reference" "#PWR01"
+			(at 39.37 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 36.83 34.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 33.02 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eae1a772-974a-4f5c-a14e-1b0ebefc4dad")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -7321,88 +7969,6 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 33.02 30.48 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d7108bd7-be9d-4899-90fc-17f37930ff43")
-		(property "Reference" "C1"
-			(at 36.83 29.2099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "2.2nF"
-			(at 36.83 31.7499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 32.0548 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 33.02 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 33.02 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ba442cd0-3afe-4990-8938-73e9d383baf4")
-		)
-		(pin "2"
-			(uuid "8f4a705d-578b-49e4-bbf9-42521394454f")
-		)
-		(instances
-			(project "IR_sensor_ring"
-				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -7956,6 +8522,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 71.12 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9d3b830-1776-4eae-8e40-eb847d19967f")
+		(property "Reference" "#PWR02"
+			(at 71.12 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 71.12 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 71.12 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ea8cbf3-c7d1-498d-a5b5-53388f90c678")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 82.55 81.28 90)
 		(unit 1)
 		(body_style 1)
@@ -8113,6 +8757,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 40.64 26.67 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef3e8e9d-c3a6-4125-99a8-782e75e16534")
+		(property "Reference" "#PWR035"
+			(at 40.64 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 40.64 21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 40.64 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "25faa103-e8a4-4528-a4d2-6e852326332e")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 57.15 55.88 90)
 		(unit 1)
 		(body_style 1)
@@ -8191,6 +8913,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 30.48 127 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f2243e78-20f2-4db2-bcc5-aa5f08f2fc42")
+		(property "Reference" "#PWR033"
+			(at 36.83 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 34.29 126.9999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 30.48 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adc7be76-bd3c-4caf-a360-56bb62f875db")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 137.16 26.67 90)
 		(unit 1)
@@ -8222,7 +9023,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 137.16 28.448 90)
 			(hide yes)
 			(show_name no)
@@ -8244,7 +9045,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 137.16 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -8302,7 +9103,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0508_1220Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.76 28.448 90)
 			(hide yes)
 			(show_name no)
@@ -8324,7 +9125,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 111.76 26.67 0)
 			(hide yes)
 			(show_name no)
