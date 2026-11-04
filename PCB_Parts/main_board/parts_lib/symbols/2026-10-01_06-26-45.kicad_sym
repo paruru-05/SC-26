@@ -12,7 +12,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 27.94 10.16 0)
+			(at 0 15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22,7 +22,7 @@
 			)
 		)
 		(property "Value" "CD74HC4051PWR"
-			(at 27.94 7.62 0)
+			(at 0 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32,7 +32,7 @@
 			)
 		)
 		(property "Footprint" "PW16"
-			(at 0 0 0)
+			(at -15.24 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -101,7 +101,7 @@
 		(symbol "CD74HC4051PWR_0_1"
 			(polyline
 				(pts
-					(xy 7.62 5.08) (xy 7.62 -22.86)
+					(xy -7.62 11.43) (xy -7.62 -11.43)
 				)
 				(stroke
 					(width 0.127)
@@ -113,7 +113,7 @@
 			)
 			(polyline
 				(pts
-					(xy 7.62 -22.86) (xy 48.26 -22.86)
+					(xy -7.62 -11.43) (xy 7.62 -11.43)
 				)
 				(stroke
 					(width 0.127)
@@ -125,7 +125,7 @@
 			)
 			(polyline
 				(pts
-					(xy 48.26 5.08) (xy 7.62 5.08)
+					(xy 7.62 11.43) (xy -7.62 11.43)
 				)
 				(stroke
 					(width 0.127)
@@ -137,7 +137,7 @@
 			)
 			(polyline
 				(pts
-					(xy 48.26 -22.86) (xy 48.26 5.08)
+					(xy 7.62 -11.43) (xy 7.62 11.43)
 				)
 				(stroke
 					(width 0.127)
@@ -148,7 +148,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 0 0 0)
+				(at -15.24 8.89 0)
 				(length 7.62)
 				(name "A4"
 					(effects
@@ -166,7 +166,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 0 -2.54 0)
+				(at -15.24 6.35 0)
 				(length 7.62)
 				(name "A6"
 					(effects
@@ -184,7 +184,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 0 -5.08 0)
+				(at -15.24 3.81 0)
 				(length 7.62)
 				(name "A"
 					(effects
@@ -202,7 +202,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 0 -7.62 0)
+				(at -15.24 1.27 0)
 				(length 7.62)
 				(name "A7"
 					(effects
@@ -220,7 +220,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 0 -10.16 0)
+				(at -15.24 -1.27 0)
 				(length 7.62)
 				(name "A5"
 					(effects
@@ -238,7 +238,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -12.7 0)
+				(at -15.24 -3.81 0)
 				(length 7.62)
 				(name "*E"
 					(effects
@@ -256,7 +256,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -15.24 0)
+				(at -15.24 -6.35 0)
 				(length 7.62)
 				(name "VEE"
 					(effects
@@ -274,7 +274,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -17.78 0)
+				(at -15.24 -8.89 0)
 				(length 7.62)
 				(name "GND"
 					(effects
@@ -292,7 +292,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -17.78 180)
+				(at 15.24 -8.89 180)
 				(length 7.62)
 				(name "S2"
 					(effects
@@ -310,7 +310,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -15.24 180)
+				(at 15.24 -6.35 180)
 				(length 7.62)
 				(name "S1"
 					(effects
@@ -328,7 +328,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -12.7 180)
+				(at 15.24 -3.81 180)
 				(length 7.62)
 				(name "S0"
 					(effects
@@ -346,7 +346,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -10.16 180)
+				(at 15.24 -1.27 180)
 				(length 7.62)
 				(name "A3"
 					(effects
@@ -364,7 +364,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -7.62 180)
+				(at 15.24 1.27 180)
 				(length 7.62)
 				(name "A0"
 					(effects
@@ -382,7 +382,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -5.08 180)
+				(at 15.24 3.81 180)
 				(length 7.62)
 				(name "A1"
 					(effects
@@ -400,7 +400,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 55.88 -2.54 180)
+				(at 15.24 6.35 180)
 				(length 7.62)
 				(name "A2"
 					(effects
@@ -417,8 +417,10 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 55.88 0 180)
+		)
+		(symbol "CD74HC4051PWR_1_1"
+			(pin passive line
+				(at 15.24 8.89 180)
 				(length 7.62)
 				(name "VCC"
 					(effects

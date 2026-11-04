@@ -5,7 +5,7 @@
 	(uuid "d2d0b56b-4f53-4a84-bde5-c7e20fc68393")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x10"
+		(symbol "Connector_Generic:Conn_01x05"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -16,7 +16,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 12.7 0)
+				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -25,8 +25,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x10"
-				(at 0 -15.24 0)
+			(property "Value" "Conn_01x05"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -57,7 +57,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -90,38 +90,16 @@
 					)
 				)
 			)
-			(symbol "Conn_01x10_1_1"
+			(symbol "Conn_01x05_1_1"
 				(rectangle
-					(start -1.27 11.43)
-					(end 1.27 -13.97)
+					(start -1.27 6.35)
+					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 10.287)
-					(end 0 10.033)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 				(rectangle
@@ -179,41 +157,8 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -12.573)
-					(end 0 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
-					(at -5.08 10.16 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -231,7 +176,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -249,7 +194,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -267,7 +212,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -285,7 +230,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -295,96 +240,6 @@
 						)
 					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 0)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2131,6 +1986,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 86.36 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "58f8ec78-0330-45e7-ab30-8ed39b3de6c3")
 		)
@@ -2213,6 +2079,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 107.95 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fbfd3b8c-4dbd-4fc5-9302-4d0efd37cbab")
 		)
@@ -2284,6 +2161,17 @@
 		)
 		(property "Description" ""
 			(at 137.16 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 137.16 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2375,6 +2263,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 133.35 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b9470dbc-909d-49d5-9596-a6f2f5bf79bf")
 		)
@@ -2446,6 +2345,17 @@
 		)
 		(property "Description" ""
 			(at 111.76 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 111.76 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2527,6 +2437,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 57.15 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 57.15 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -2619,6 +2540,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 82.55 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8311121c-9a48-44b1-8528-3f16ed880324")
 		)
@@ -2629,110 +2561,6 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x10")
-		(at 25.4 116.84 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1c1d9721-c996-499a-bf82-fa52ab3fafa1")
-		(property "Reference" "J1"
-			(at 25.4 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x10"
-			(at 25.4 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EEDA:CONN-SMD_B10B-PH-SM4-TB-LF-SN"
-			(at 25.4 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 25.4 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "c89a4b63-018f-4f12-b5ab-e927de717bb8")
-		)
-		(pin "3"
-			(uuid "7b18d832-2095-4d9d-9c9d-1401efed7893")
-		)
-		(pin "1"
-			(uuid "2310007e-bc89-4c09-964e-9404cd643209")
-		)
-		(pin "2"
-			(uuid "082bc3fe-755d-402b-adad-0744842b2083")
-		)
-		(pin "4"
-			(uuid "b00dd2dc-d015-4c2b-982f-cf681d725813")
-		)
-		(pin "5"
-			(uuid "d0419360-79fd-4bfa-9da8-863b4b742864")
-		)
-		(pin "7"
-			(uuid "1db0c84a-e637-4afb-ba2b-c1a2fe12a66c")
-		)
-		(pin "6"
-			(uuid "da3bb859-e06e-4215-80f8-1923c8b8ae49")
-		)
-		(pin "9"
-			(uuid "f8dfded1-663e-4978-a71b-0c187defc4a5")
-		)
-		(pin "10"
-			(uuid "00d4f65b-3d83-4bbc-b795-e557c1773443")
-		)
-		(instances
-			(project "IR_sensor_ring"
-				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -2916,6 +2744,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 86.36 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "20b103f8-148c-45de-bdeb-595ae3e9a9e1")
 		)
@@ -2926,6 +2765,95 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 25.4 121.92 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2576cb08-1ec7-45e1-a16c-2c600c2b5cf9")
+		(property "Reference" "J27"
+			(at 25.4 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 25.4 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EEDA:CONN-SMD_5P-P2.00_B6B-PH-SM4-TB-LF-SN"
+			(at 25.4 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 25.4 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "198b98f7-3b10-428f-8315-caa32c873ed5")
+		)
+		(pin "1"
+			(uuid "3a54ce2f-1834-460f-bd17-bb06b59ddc70")
+		)
+		(pin "2"
+			(uuid "41367598-30bc-4750-88b4-cd5b5249887c")
+		)
+		(pin "5"
+			(uuid "abc1f45e-7989-4584-8039-e4e0228c5c8d")
+		)
+		(pin "3"
+			(uuid "f713e70d-fccd-4fd2-8544-467c7fdcc650")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "J27")
 					(unit 1)
 				)
 			)
@@ -3189,6 +3117,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 107.95 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cf650596-2e8d-4c30-9714-f3f0f20aae76")
 		)
@@ -3339,6 +3278,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 33.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 33.02 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3533,6 +3483,17 @@
 		)
 		(property "Description" ""
 			(at 86.36 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 86.36 96.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3815,6 +3776,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 107.95 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "803637bf-c259-49b6-9ca8-d72ae4a6c411")
 		)
@@ -3886,6 +3858,17 @@
 		)
 		(property "Description" ""
 			(at 60.96 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 60.96 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4359,6 +4342,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 60.96 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fec9a5e6-e90d-4ecb-bcc0-f58c86c8e7c6")
 		)
@@ -4441,6 +4435,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 133.35 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7cfd16ab-d739-4e4a-9f4d-9569e9277ab4")
 		)
@@ -4512,6 +4517,17 @@
 		)
 		(property "Description" ""
 			(at 111.76 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 111.76 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4716,6 +4732,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 82.55 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d277a822-fe81-453a-bdcb-31a4f13fc430")
 		)
@@ -4726,6 +4753,95 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 38.1 121.92 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6af9251f-8eb8-47c6-bc67-f389835e9e06")
+		(property "Reference" "J25"
+			(at 38.1 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 38.1 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EEDA:CONN-SMD_5P-P2.00_B6B-PH-SM4-TB-LF-SN"
+			(at 38.1 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 38.1 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "121fe244-de5e-4862-ae53-565d5e85f056")
+		)
+		(pin "1"
+			(uuid "34158c17-4e7f-49c3-9264-8ad64affd1d2")
+		)
+		(pin "2"
+			(uuid "bc546ac7-fd4e-4b88-a798-1e5347434ebb")
+		)
+		(pin "5"
+			(uuid "6bb100d7-bf55-4511-b2df-2a7e8f7e7e5f")
+		)
+		(pin "3"
+			(uuid "13ba53c1-8413-4273-ad75-16ab19291401")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "J25")
 					(unit 1)
 				)
 			)
@@ -5022,6 +5138,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 36.83 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d6dfcf8b-fd29-443d-bcb3-278f4ee79fba")
 		)
@@ -5093,6 +5220,17 @@
 		)
 		(property "Description" ""
 			(at 36.83 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 36.83 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5418,6 +5556,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 137.16 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "596a72ee-6011-45c3-8cb2-b0d0a95162bf")
 		)
@@ -5428,110 +5577,6 @@
 			(project "IR_sensor_ring"
 				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
 					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x10")
-		(at 38.1 116.84 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "830deff9-4362-400e-b56b-31e5f6f72408")
-		(property "Reference" "J2"
-			(at 38.1 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x10"
-			(at 38.1 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EEDA:CONN-SMD_B10B-PH-SM4-TB-LF-SN"
-			(at 38.1 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 38.1 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "e9f1a76d-2416-444d-89a2-757b02b66739")
-		)
-		(pin "3"
-			(uuid "2f16e097-7851-4757-8f97-230b7eef3a37")
-		)
-		(pin "1"
-			(uuid "d7ead216-b5ed-48ad-878f-2af4d675ec98")
-		)
-		(pin "2"
-			(uuid "6a0f85e0-33dc-4ad1-b465-02a35ecedeee")
-		)
-		(pin "4"
-			(uuid "1bdcec96-4f98-4115-b557-cca2d3023b35")
-		)
-		(pin "5"
-			(uuid "39ecd134-b4f6-436e-86b7-e38c773be52a")
-		)
-		(pin "7"
-			(uuid "26566d3c-00ce-4af2-a388-a761cab176c5")
-		)
-		(pin "6"
-			(uuid "f70802fb-0e67-4213-96c9-6ee41f26abf8")
-		)
-		(pin "9"
-			(uuid "3bc2527c-c3e0-4943-b442-d7457978df4f")
-		)
-		(pin "10"
-			(uuid "5069fea0-3930-46ab-9242-c4a7bdc1a710")
-		)
-		(instances
-			(project "IR_sensor_ring"
-				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5673,6 +5718,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 133.35 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 133.35 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -5878,6 +5934,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 82.55 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "be43dbfc-623d-4816-9aa1-8289ce3e6b8a")
 		)
@@ -5950,6 +6017,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 33.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 33.02 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -6110,6 +6188,17 @@
 		)
 		(property "Description" ""
 			(at 86.36 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 86.36 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6448,6 +6537,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 25.4 109.22 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7b32b0b-bee4-49b6-8b88-44b32a377e6e")
+		(property "Reference" "J26"
+			(at 25.4 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 25.4 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EEDA:CONN-SMD_5P-P2.00_B6B-PH-SM4-TB-LF-SN"
+			(at 25.4 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 25.4 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "61a3eb42-e130-472f-ab0d-989917664631")
+		)
+		(pin "1"
+			(uuid "05e45779-d8c8-4321-9954-a68b22a97997")
+		)
+		(pin "2"
+			(uuid "b37049b1-83f5-4c20-8ae8-3ca910c2899d")
+		)
+		(pin "5"
+			(uuid "bc4d87cc-faf9-429b-9721-26e164d5f7c1")
+		)
+		(pin "3"
+			(uuid "eba5c40c-2471-4d77-977e-477676253692")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "J26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 71.12 115.57 0)
 		(unit 1)
@@ -6582,6 +6760,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 57.15 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 57.15 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6944,6 +7133,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 57.15 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a368dde2-57b7-4cce-b14b-1407ffff43df")
 		)
@@ -7094,6 +7294,17 @@
 		)
 		(property "Description" ""
 			(at 36.83 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 36.83 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7355,6 +7566,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 38.1 109.22 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9f07e80-ebca-4e67-a704-499c770ab6c8")
+		(property "Reference" "J24"
+			(at 38.1 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 38.1 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EEDA:CONN-SMD_5P-P2.00_B6B-PH-SM4-TB-LF-SN"
+			(at 38.1 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 38.1 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "56182896-4be6-4d3e-bd9d-34888de21e7b")
+		)
+		(pin "1"
+			(uuid "b5f85e46-da04-494c-b3ae-8db71aa851c7")
+		)
+		(pin "2"
+			(uuid "3d449eb7-4ae5-4a60-b500-6247e87be407")
+		)
+		(pin "5"
+			(uuid "ebbd6c87-00a0-4d7d-bd42-3d1fbc734ecb")
+		)
+		(pin "3"
+			(uuid "8fd55746-8b9e-4afc-af49-fd8d425c8198")
+		)
+		(instances
+			(project "IR_sensor_ring"
+				(path "/d2d0b56b-4f53-4a84-bde5-c7e20fc68393"
+					(reference "J24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 60.96 26.67 90)
 		(unit 1)
@@ -7410,6 +7710,17 @@
 		)
 		(property "Description" ""
 			(at 60.96 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 60.96 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8154,6 +8465,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C1604"
+			(at 33.02 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c12dfa08-a1df-4985-91f1-80733fd0c99b")
 		)
@@ -8226,6 +8548,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 82.55 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C1604"
 			(at 82.55 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -9056,6 +9389,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C25819"
+			(at 137.16 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d92691a7-8bce-4bcc-9200-a2591a8a16bf")
 		)
@@ -9127,6 +9471,17 @@
 		)
 		(property "Description" ""
 			(at 111.76 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C25819"
+			(at 111.76 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
