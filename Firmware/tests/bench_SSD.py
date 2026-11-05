@@ -4,7 +4,7 @@ import time
 import micropython
 
 @micropython.viper
-def _get_diff_bounds(old_buf: ptr8, new_buf: ptr8, width: int, pages: int) -> object:
+def _get_diff_bounds(old_buf: ptr8, new_buf: ptr8, width: int, pages: int) -> object: # type: ignore
     min_c = 999
     max_c = -1
     min_p = 999
@@ -25,7 +25,7 @@ def _get_diff_bounds(old_buf: ptr8, new_buf: ptr8, width: int, pages: int) -> ob
     return (min_c, max_c, min_p, max_p)
 
 def show_auto_diff(oled, old_buffer):
-    min_c, max_c, min_p, max_p = _get_diff_bounds(old_buffer, oled.buffer, oled.width, oled.pages)
+    min_c, max_c, min_p, max_p = _get_diff_bounds(old_buffer, oled.buffer, oled.width, oled.pages) # type: ignore
     
     if max_c == -1:
         return
