@@ -1,2 +1,4 @@
 .markdownlint.json
 *.kicad_prl
+*.history/
+.history/
