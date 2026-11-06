@@ -11,6 +11,7 @@
     ],
     "python.analysis.extraPaths": [
         "~/.micropico-stubs/included",
-        "./Firmware/lib"
+        "./Firmware/lib",
+        "./Firmware/Pico2W/lib"
     ]
 }

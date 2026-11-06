@@ -18,22 +18,18 @@ SLEEP = Pin(10)
 SLEEP.off()
 
 #driver 1
-msg(DIM+"Initializing "+CYA+"Driver 1..."," ")
 PH_1 = Pin(0)
 EN_1 = PWM(Pin(1))
 
 #driver 2
-msg(DIM+"Initializing "+CYA+"Driver 2..."," ")
 PH_2 = Pin(2)
 EN_2 = PWM(Pin(3))
 
 #driver 3
-msg(DIM+"Initializing "+CYA+"Driver 3..."," ")
 PH_3 = Pin(4)
 EN_3 = PWM(Pin(5))
 
 #driver 4
-msg(DIM+"Initializing "+CYA+"Driver 4..."," ")
 PH_4 = Pin(6)
 EN_4 = PWM(Pin(7))
 
