@@ -10,13 +10,13 @@ import time
 import math
 import random
 
-led = Pin("LED", Pin.OUT)
+led = Pin("LED")
 
 led.on()
 
 print("start")
 
-o = omni.Omni(PWM_LIST,IN_2_LIST,IN_1_LIST)
+o = omni.Omni(EN_LIST,PH_LIST)
 
 sleep(1)
 goal = 90

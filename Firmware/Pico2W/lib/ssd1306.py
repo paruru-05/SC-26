@@ -68,22 +68,22 @@ class SSD1306(framebuf.FrameBuffer):
             0x10 if self.external_vcc else 0x14,
             SET_DISP | 0x01,
         ):  # on
-            self.write_cmd(cmd)
+            self.write_cmd(cmd) # type: ignore
         self.fill(0)
         self.show()
 
     def poweroff(self):
-        self.write_cmd(SET_DISP | 0x00)
+        self.write_cmd(SET_DISP | 0x00) # type: ignore
 
     def poweron(self):
-        self.write_cmd(SET_DISP | 0x01)
+        self.write_cmd(SET_DISP | 0x01) # type: ignore
 
     def contrast(self, contrast):
-        self.write_cmd(SET_CONTRAST)
-        self.write_cmd(contrast)
+        self.write_cmd(SET_CONTRAST) # type: ignore
+        self.write_cmd(contrast) # type: ignore
 
     def invert(self, invert):
-        self.write_cmd(SET_NORM_INV | (invert & 1))
+        self.write_cmd(SET_NORM_INV | (invert & 1)) # type: ignore
 
     def show(self):
         x0 = 0
@@ -92,13 +92,13 @@ class SSD1306(framebuf.FrameBuffer):
             # displays with width of 64 pixels are shifted by 32
             x0 += 32
             x1 += 32
-        self.write_cmd(SET_COL_ADDR)
-        self.write_cmd(x0)
-        self.write_cmd(x1)
-        self.write_cmd(SET_PAGE_ADDR)
-        self.write_cmd(0)
-        self.write_cmd(self.pages - 1)
-        self.write_data(self.buffer)
+        self.write_cmd(SET_COL_ADDR) # type: ignore
+        self.write_cmd(x0) # type: ignore
+        self.write_cmd(x1) # type: ignore
+        self.write_cmd(SET_PAGE_ADDR) # type: ignore
+        self.write_cmd(0) # type: ignore
+        self.write_cmd(self.pages - 1) # type: ignore
+        self.write_data(self.buffer) # type: ignore
 
 
 class SSD1306_I2C(SSD1306):

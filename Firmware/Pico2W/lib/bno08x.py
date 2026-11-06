@@ -604,7 +604,7 @@ class BNO08X:
             return
         from machine import Pin  # pylint:disable=import-outside-toplevel
 
-        self._reset = Pin(self._rst_pin, Pin.OUT)
+        self._reset = Pin(self._rst_pin, Pin.OUT) # type: ignore
         self._reset.value(1)
         sleep_ms(10)
         self._reset.value(0)
@@ -956,10 +956,10 @@ class BNO08X:
         self._insert_cde_request_report(
             ME_SAVE_DCD_CDE,
             local_buffer,  # should use self._buffer :\ but send_packet don't
-            self._sr_seq_nb.get(COMMAND_REQUEST, 0),  # report_seq_id
+            self._sr_seq_nb.get(COMMAND_REQUEST, 0),  # report_seq_id # type: ignore
         )
         self._send_packet(BNO_CHANNEL_CONTROL, local_buffer)
-        self._sr_seq_nb[COMMAND_REQUEST] = (self._sr_seq_nb.get(COMMAND_REQUEST, 0) + 1) % 256  # increment sr_seq_nb
+        self._sr_seq_nb[COMMAND_REQUEST] = (self._sr_seq_nb.get(COMMAND_REQUEST, 0) + 1) % 256  # type: ignore # increment sr_seq_nb
 
         start_time = ticks_ms()
         while ticks_diff(ticks_ms(), start_time) < DEFAULT_TIMEOUT:
@@ -975,11 +975,11 @@ class BNO08X:
         self._insert_cde_request_report(
             me_cde,
             self._cde_buffer,  # should use self._buffer :\ but send_packet don't
-            self._sr_seq_nb.get(COMMAND_REQUEST, 0),  # report_seq_id
+            self._sr_seq_nb.get(COMMAND_REQUEST, 0),  # report_seq_id # type: ignore
             subcommand,
         )
         self._send_packet(BNO_CHANNEL_CONTROL, local_buffer)
-        self._sr_seq_nb[COMMAND_REQUEST] = (self._sr_seq_nb.get(COMMAND_REQUEST, 0) + 1) % 256  # increment sr_seq_nb
+        self._sr_seq_nb[COMMAND_REQUEST] = (self._sr_seq_nb.get(COMMAND_REQUEST, 0) + 1) % 256  # type: ignore # increment sr_seq_nb
 
     def _process_available_packets(self, max_packets=None):
         processed_count = 0
@@ -1074,7 +1074,7 @@ class BNO08X:
             report_id, sw_major, sw_minor, sw_part_number, sw_build_number, sw_patch = unpack_from("<HBBIIH",
                                                                                                    report_bytes)
             if report_id != SHTP_REPORT_ID_RESPONSE:
-                raise AttributeError("Wrong report id for sensor id: %s" % hex(buffer[0]))
+                raise AttributeError("Wrong report id for sensor id: %s" % hex(buffer[0])) # type: ignore
             self._dbg("\tFROM PACKET SLICE:")
             self._dbg("\t*** Part Number: %d" % sw_part_number)
             self._dbg("\t*** Software Version: %d.%d.%d" % (sw_major, sw_minor, sw_patch))

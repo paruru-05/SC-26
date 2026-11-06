@@ -1,0 +1,1 @@
+/home/harut/SC-26/Firmware/Pico/lib/PinConfig_Pico.py
