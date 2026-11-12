@@ -1,0 +1,267 @@
+from machine import Pin as _Pin
+from machine import UART as _UART
+import struct as _struct
+from time import ticks_ms as _ticks_ms, ticks_diff as _ticks_diff
+
+# Frame types
+TYPE_COMMAND = 0x10
+TYPE_TELEMETRY = 0x20
+TYPE_KICK_ACK = 0x21
+TYPE_KICK_RESULT = 0x22
+
+# KICK command
+KICK_NONE = 0
+KICK_FIRE = 1
+KICK_CANCEL = 2
+
+# KICK ACK status
+ACK_ACCEPTED = 0
+ACK_DUPLICATE = 1
+ACK_REJECT_BUSY = 2
+ACK_REJECT_FAULT = 3
+ACK_REJECT_MODE = 4
+ACK_REJECT_INVALID = 5
+
+# KICK result status
+RESULT_SUCCESS = 0
+RESULT_CANCELLED = 1
+RESULT_FAILED = 2
+RESULT_TIMEOUT = 3
+
+# KICK ID reserved value
+KICK_ID_NONE = 0xFFFF
+
+_SYNC = b"\xA5\x5A"
+
+_FRAME_LENGTHS = {
+    TYPE_COMMAND: 23,
+    TYPE_TELEMETRY: 21,
+    TYPE_KICK_ACK: 9,
+    TYPE_KICK_RESULT: 9
+}
+
+
+def _crc16(data):
+    crc = 0xFFFF
+
+    for b in data:
+        crc ^= b << 8
+
+        for _ in range(8):
+            if crc & 0x8000:
+                crc = ((crc << 1) ^ 0x1021) & 0xFFFF
+            else:
+                crc = (crc << 1) & 0xFFFF
+
+    return crc
+
+class _UARTBase:
+    def __init__(self):
+        self.uart = _UART(
+            1,
+            baudrate=1_000_000,
+            bits=8,
+            parity=None,
+            stop=1,
+            tx=_Pin(8),
+            rx=_Pin(9),
+            rxbuf=128,
+            txbuf=128,
+            timeout=0,
+            timeout_char=0
+        )
+
+        self._rx = bytearray()
+        self._tx_seq = 0
+
+        self._last_seq = None
+        self.seq_lost = 0
+        self.seq_duplicate = 0
+        self.seq_out_of_order = 0
+
+        self._last_rx = 0
+        self._has_rx = False
+
+    def _send_frame(self, frame_type, payload):
+        body = bytes((frame_type, self._tx_seq)) + payload
+        crc = _crc16(body)
+
+        frame = _SYNC + body + _struct.pack("<H", crc)
+
+        result = self.uart.write(frame)
+        self._tx_seq = (self._tx_seq + 1) & 0xFF
+
+        return result
+
+    def _read_packets(self):
+        data = self.uart.read()
+
+        if data:
+            self._rx.extend(data)
+
+        packets = []
+
+        while True:
+            pos = self._rx.find(_SYNC)
+
+            if pos < 0:
+                if self._rx and self._rx[-1] == 0xA5:
+                    self._rx[:] = b"\xA5"
+                else:
+                    self._rx.clear()
+                break
+
+            if pos:
+                del self._rx[:pos]
+
+            if len(self._rx) < 4:
+                break
+
+            frame_type = self._rx[2]
+            frame_length = _FRAME_LENGTHS.get(frame_type)
+
+            if frame_length is None:
+                del self._rx[0]
+                continue
+
+            if len(self._rx) < frame_length:
+                break
+
+            received_crc = (
+                self._rx[frame_length - 2]
+                | (self._rx[frame_length - 1] << 8)
+            )
+
+            calculated_crc = _crc16(self._rx[2:frame_length - 2])
+
+            if received_crc != calculated_crc:
+                del self._rx[0]
+                continue
+
+            seq = self._rx[3]
+            payload = bytes(self._rx[4:frame_length - 2])
+
+            now = _ticks_ms()
+
+            if self._has_rx and _ticks_diff(now, self._last_rx) > 100:
+                self._last_seq = None
+
+            if self._last_seq is not None:
+                delta = (seq - self._last_seq) & 0xFF
+
+                if delta == 0:
+                    self.seq_duplicate += 1
+                elif delta < 128:
+                    self.seq_lost += delta - 1
+                    self._last_seq = seq
+                else:
+                    self.seq_out_of_order += 1
+            else:
+                self._last_seq = seq
+
+            self._last_rx = now
+            self._has_rx = True
+
+            packets.append((frame_type, seq, payload))
+
+            del self._rx[:frame_length]
+
+        return packets
+
+    def link_alive(self, timeout_ms=50):
+        if not self._has_rx:
+            return False
+
+        return _ticks_diff(_ticks_ms(), self._last_rx) <= timeout_ms
+    
+class Pico2WUART(_UARTBase):
+    def __init__(self):
+        super().__init__()
+
+        self.kick_result_ack_id = KICK_ID_NONE
+
+    def send_command(
+        self,
+        vx=0,
+        vy=0,
+        omega=0,
+        dribbler=0,
+        kick_command=KICK_NONE,
+        kick_id=0,
+        control_mode=1,
+        host_error_status=0,
+        command_timeout_ms=30
+    ):
+        payload = _struct.pack(
+            "<hhhHBHHBHB",
+            vx,
+            vy,
+            omega,
+            dribbler,
+            kick_command,
+            kick_id,
+            self.kick_result_ack_id,
+            control_mode,
+            host_error_status,
+            command_timeout_ms
+        )
+
+        return self._send_frame(TYPE_COMMAND, payload)
+
+    def read_messages(self):
+        messages = []
+
+        for frame_type, seq, payload in self._read_packets():
+
+            if frame_type == TYPE_TELEMETRY:
+                (
+                    kick_status,
+                    motor_fault,
+                    ultrasonic_0,
+                    ultrasonic_1,
+                    ultrasonic_2,
+                    ultrasonic_3,
+                    ultrasonic_status,
+                    error_status,
+                    system_status
+                ) = _struct.unpack("<BBHHHHBHH", payload)
+
+                messages.append({
+                    "type": "telemetry",
+                    "seq": seq,
+                    "kick_status": kick_status,
+                    "motor_fault": motor_fault,
+                    "ultrasonic": (
+                        ultrasonic_0,
+                        ultrasonic_1,
+                        ultrasonic_2,
+                        ultrasonic_3
+                    ),
+                    "ultrasonic_status": ultrasonic_status,
+                    "error_status": error_status,
+                    "system_status": system_status
+                })
+
+            elif frame_type == TYPE_KICK_ACK:
+                kick_id, status = _struct.unpack("<HB", payload)
+
+                messages.append({
+                    "type": "kick_ack",
+                    "seq": seq,
+                    "kick_id": kick_id,
+                    "status": status
+                })
+
+            elif frame_type == TYPE_KICK_RESULT:
+                kick_id, status = _struct.unpack("<HB", payload)
+
+                self.kick_result_ack_id = kick_id
+
+                messages.append({
+                    "type": "kick_result",
+                    "seq": seq,
+                    "kick_id": kick_id,
+                    "status": status
+                })
+
+        return messages
