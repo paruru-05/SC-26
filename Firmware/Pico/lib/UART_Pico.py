@@ -1,18 +1,33 @@
+
 from machine import Pin as _Pin
 from machine import UART as _UART
 import struct as _struct
+import micropython as _micropython
 from time import ticks_ms as _ticks_ms, ticks_diff as _ticks_diff
 
+
+# ============================================================
+# MicroPython optimization
+# ============================================================
+
+_native = _micropython.native
+
+
+# ============================================================
 # Frame types
+# ============================================================
+
 TYPE_COMMAND = 0x10
 TYPE_TELEMETRY = 0x20
 TYPE_KICK_ACK = 0x21
 TYPE_KICK_RESULT = 0x22
 
+
 # KICK command
 KICK_NONE = 0
 KICK_FIRE = 1
 KICK_CANCEL = 2
+
 
 # KICK ACK status
 ACK_ACCEPTED = 0
@@ -22,30 +37,55 @@ ACK_REJECT_FAULT = 3
 ACK_REJECT_MODE = 4
 ACK_REJECT_INVALID = 5
 
+
 # KICK result status
 RESULT_SUCCESS = 0
 RESULT_CANCELLED = 1
 RESULT_FAILED = 2
 RESULT_TIMEOUT = 3
 
+
 # KICK ID reserved value
 KICK_ID_NONE = 0xFFFF
 
+
+# ============================================================
+# Constants
+# ============================================================
+
 _SYNC = b"\xA5\x5A"
 
-_FRAME_LENGTHS = {
-    TYPE_COMMAND: 23,
-    TYPE_TELEMETRY: 21,
-    TYPE_KICK_ACK: 9,
-    TYPE_KICK_RESULT: 9
-}
+# Index = frame type
+# _FRAME_LENGTHS = (
+#     0, 0, 0, 0, 0, 0, 0, 0,
+#     0, 0, 0, 0, 0, 0, 0, 0,
+#     23, 0, 0, 0, 0, 0, 0, 0,
+#     0, 0, 0, 0, 0, 0, 0, 0,
+#     21, 9, 9
+# )
+
+_FRAME_LENGTHS = (
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    25, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    23, 9, 9
+)
+
+_COMMAND_STRUCT = "<hhhHBHHBHB"
+_TELEMETRY_STRUCT = "<BBHHHHBHH"
+_KICK_STRUCT = "<HB"
 
 
-def _crc16(data):
-    crc = 0xFFFF
+# ============================================================
+# CRC16-CCITT LUT
+# ============================================================
 
-    for b in data:
-        crc ^= b << 8
+def _make_crc_table():
+    table = [0] * 256
+
+    for i in range(256):
+        crc = i << 8
 
         for _ in range(8):
             if crc & 0x8000:
@@ -53,9 +93,34 @@ def _crc16(data):
             else:
                 crc = (crc << 1) & 0xFFFF
 
+        table[i] = crc
+
+    return tuple(table)
+
+
+_CRC16_TABLE = _make_crc_table()
+
+
+@_native
+def _crc16(data, start, end):
+    crc = 0xFFFF
+    table = _CRC16_TABLE
+
+    for i in range(start, end):
+        crc = (
+            ((crc << 8) & 0xFFFF)
+            ^ table[((crc >> 8) ^ data[i]) & 0xFF]
+        )
+
     return crc
 
+
+# ============================================================
+# UART Base
+# ============================================================
+
 class _UARTBase:
+
     def __init__(self):
         self.uart = _UART(
             1,
@@ -75,6 +140,7 @@ class _UARTBase:
         self._tx_seq = 0
 
         self._last_seq = None
+
         self.seq_lost = 0
         self.seq_duplicate = 0
         self.seq_out_of_order = 0
@@ -83,79 +149,106 @@ class _UARTBase:
         self._has_rx = False
 
     def _send_frame(self, frame_type, payload):
-        body = bytes((frame_type, self._tx_seq)) + payload
-        crc = _crc16(body)
+        seq = self._tx_seq
+
+        body = bytes((frame_type, seq)) + payload
+        crc = _crc16(body, 0, len(body))
 
         frame = _SYNC + body + _struct.pack("<H", crc)
 
         result = self.uart.write(frame)
-        self._tx_seq = (self._tx_seq + 1) & 0xFF
+
+        self._tx_seq = (seq + 1) & 0xFF
 
         return result
 
     def _read_packets(self):
-        data = self.uart.read()
+        uart_read = self.uart.read
+        rx = self._rx
+
+        data = uart_read()
 
         if data:
-            self._rx.extend(data)
+            rx.extend(data)
 
         packets = []
 
+        find = rx.find
+        ticks = _ticks_ms
+        diff = _ticks_diff
+
         while True:
-            pos = self._rx.find(_SYNC)
+
+            pos = find(_SYNC)
 
             if pos < 0:
-                if self._rx and self._rx[-1] == 0xA5:
-                    self._rx[:] = b"\xA5"
+                if rx and rx[-1] == 0xA5:
+                    rx[:] = b"\xA5"
                 else:
-                    self._rx.clear()
+                    rx.clear()
+
                 break
 
             if pos:
-                del self._rx[:pos]
+                del rx[:pos]
 
-            if len(self._rx) < 4:
+            if len(rx) < 4:
                 break
 
-            frame_type = self._rx[2]
-            frame_length = _FRAME_LENGTHS.get(frame_type)
+            frame_type = rx[2]
 
-            if frame_length is None:
-                del self._rx[0]
+            if frame_type >= len(_FRAME_LENGTHS):
+                del rx[0]
                 continue
 
-            if len(self._rx) < frame_length:
+            frame_length = _FRAME_LENGTHS[frame_type]
+
+            if not frame_length:
+                del rx[0]
+                continue
+
+            if len(rx) < frame_length:
                 break
 
             received_crc = (
-                self._rx[frame_length - 2]
-                | (self._rx[frame_length - 1] << 8)
+                rx[frame_length - 2]
+                | (rx[frame_length - 1] << 8)
             )
 
-            calculated_crc = _crc16(self._rx[2:frame_length - 2])
+            calculated_crc = _crc16(
+                rx,
+                2,
+                frame_length - 2
+            )
 
             if received_crc != calculated_crc:
-                del self._rx[0]
+                del rx[0]
                 continue
 
-            seq = self._rx[3]
-            payload = bytes(self._rx[4:frame_length - 2])
+            seq = rx[3]
+            payload = bytes(rx[4:frame_length - 2])
 
-            now = _ticks_ms()
+            now = ticks()
 
-            if self._has_rx and _ticks_diff(now, self._last_rx) > 100:
+            if self._has_rx and diff(now, self._last_rx) > 100:
                 self._last_seq = None
 
-            if self._last_seq is not None:
-                delta = (seq - self._last_seq) & 0xFF
+            last_seq = self._last_seq
+
+            if last_seq is not None:
+
+                delta = (seq - last_seq) & 0xFF
 
                 if delta == 0:
                     self.seq_duplicate += 1
+
                 elif delta < 128:
                     self.seq_lost += delta - 1
                     self._last_seq = seq
+
                 else:
                     self.seq_out_of_order += 1
+
             else:
                 self._last_seq = seq
 
@@ -164,7 +257,7 @@ class _UARTBase:
 
             packets.append((frame_type, seq, payload))
 
-            del self._rx[:frame_length]
+            del rx[:frame_length]
 
         return packets
 
@@ -172,9 +265,18 @@ class _UARTBase:
         if not self._has_rx:
             return False
 
-        return _ticks_diff(_ticks_ms(), self._last_rx) <= timeout_ms
-    
+        return _ticks_diff(
+            _ticks_ms(),
+            self._last_rx
+        ) <= timeout_ms
+
+
+# ============================================================
+# Pico UART
+# ============================================================
+
 class PicoUART(_UARTBase):
+
     def __init__(self):
         super().__init__()
 
@@ -185,7 +287,12 @@ class PicoUART(_UARTBase):
     def read_commands(self):
         commands = []
 
+        unpack = _struct.unpack
+        pending = self._pending_kick_result
+        last_kick_id = self._last_kick_id
+
         for frame_type, seq, payload in self._read_packets():
+
             if frame_type != TYPE_COMMAND:
                 continue
 
@@ -198,20 +305,22 @@ class PicoUART(_UARTBase):
                 control_mode,
                 host_error_status,
                 command_timeout_ms
-            ) = _struct.unpack("<hhhHBHHBHB", payload)
+            ) = unpack(_COMMAND_STRUCT, payload)
 
             if (
-                self._pending_kick_result is not None
-                and kick_result_ack_id == self._pending_kick_result[0]
+                pending is not None
+                and kick_result_ack_id == pending[0]
             ):
+                pending = None
                 self._pending_kick_result = None
 
             kick_new = False
 
             if kick_command == KICK_FIRE:
-                kick_new = kick_id != self._last_kick_id
+                kick_new = kick_id != last_kick_id
 
                 if kick_new:
+                    last_kick_id = kick_id
                     self._last_kick_id = kick_id
 
             commands.append({
@@ -239,11 +348,12 @@ class PicoUART(_UARTBase):
         error_status=0,
         system_status=0
     ):
+
         if len(ultrasonic) != 4:
             raise ValueError("ultrasonic must contain 4 values")
 
         payload = _struct.pack(
-            "<BBHHHHBHH",
+            _TELEMETRY_STRUCT,
             kick_status,
             motor_fault,
             ultrasonic[0],
@@ -258,7 +368,12 @@ class PicoUART(_UARTBase):
         return self._send_frame(TYPE_TELEMETRY, payload)
 
     def send_kick_ack(self, kick_id, status):
-        payload = _struct.pack("<HB", kick_id, status)
+        payload = _struct.pack(
+            _KICK_STRUCT,
+            kick_id,
+            status
+        )
+
         return self._send_frame(TYPE_KICK_ACK, payload)
 
     def send_kick_result(self, kick_id, status):
@@ -266,21 +381,40 @@ class PicoUART(_UARTBase):
         self._send_pending_kick_result()
 
     def _send_pending_kick_result(self):
-        if self._pending_kick_result is None:
+        pending = self._pending_kick_result
+
+        if pending is None:
             return
 
-        kick_id, status = self._pending_kick_result
-        payload = _struct.pack("<HB", kick_id, status)
+        kick_id, status = pending
+
+        payload = _struct.pack(
+            _KICK_STRUCT,
+            kick_id,
+            status
+        )
 
         self._send_frame(TYPE_KICK_RESULT, payload)
+
         self._result_sent_at = _ticks_ms()
 
     def service_kick_result(self, interval_ms=20):
         if self._pending_kick_result is None:
             return False
 
-        if _ticks_diff(_ticks_ms(), self._result_sent_at) >= interval_ms:
+        if _ticks_diff(
+            _ticks_ms(),
+            self._result_sent_at
+        ) >= interval_ms:
+
             self._send_pending_kick_result()
             return True
 
         return False
+
+
+# ============================================================
+# CRC self-test
+# ============================================================
+
+assert _crc16(b"123456789", 0, 9) == 0x29B1

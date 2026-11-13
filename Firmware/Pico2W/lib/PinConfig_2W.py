@@ -2,7 +2,6 @@ from typing import Any
 
 from machine import Pin as _Pin
 from machine import ADC as _ADC
-from machine import UART as _UART
 from machine import I2C as _I2C
 from time import ticks_ms as _ticks_ms
 
@@ -53,3 +52,5 @@ IR = IR_RING()
 IR.enable()
 
 _msg("UART")
+from UART_2W import *
+uart = Pico2WUART()
